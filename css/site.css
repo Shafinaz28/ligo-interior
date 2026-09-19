@@ -1,0 +1,139 @@
+h1,
+h2,
+h3 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+    white-space: normal;
+}
+
+@media (min-width: 860px) {
+    h2 {
+        white-space: nowrap;
+    }
+}
+
+.gallery-title,
+.gallery-copy {
+    text-align: left;
+    white-space: normal;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.why-slider {
+    overflow: hidden;
+    margin-right: calc(50% - 50vw);
+}
+
+.why-track {
+    display: flex;
+    width: max-content;
+    gap: 16px;
+    padding: 4px 4px 8px 0;
+    animation: why-slide 32s linear infinite;
+}
+
+.why-slider:hover .why-track {
+    animation-play-state: paused;
+}
+
+.why-card {
+    display: flex;
+    width: 188px;
+    min-height: 196px;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+    background: #fff;
+    padding: 28px 16px 20px;
+    box-shadow: 0 1px 6px rgba(28, 25, 23, 0.06);
+}
+
+.why-icon {
+    position: relative;
+    display: grid;
+    width: 88px;
+    height: 88px;
+    place-items: center;
+}
+
+.why-blob {
+    position: absolute;
+    inset: 0;
+    fill: #f3e6c0;
+}
+
+.why-glyph {
+    position: relative;
+    z-index: 1;
+    width: 52px;
+    height: 52px;
+    color: #e0aa3e;
+}
+
+.why-card p {
+    margin: 16px 0 0;
+    max-width: 11.5ch;
+    color: #4b4540;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.35;
+    text-align: center;
+}
+
+@keyframes why-slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-50% - 8px)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .why-track {
+        animation: none;
+        overflow-x: auto;
+        max-width: 100%;
+        scroll-snap-type: x mandatory;
+    }
+
+    .why-card {
+        scroll-snap-align: start;
+    }
+}
+
+.page-service .service-card,
+.page-service .service-card [id],
+.page-service #kitchen,
+.page-service #full-home,
+.page-service #bedroom,
+.page-service #renovation,
+.page-service #wardrobe {
+    scroll-margin-top: 108px;
+}
+
+.page-service .service-card h2 {
+    white-space: normal;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.page-service .cta-band h2 {
+    white-space: normal;
+}
+
+@media (min-width: 860px) {
+    .page-service .cta-band h2 {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.img-swap-next {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+}

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligo Interiors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-paper: #fcfaf6;
+            --color-ink: #1c1917;
+            --color-muted: #6b635c;
+            --color-accent: #e0aa3e;
+            --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+            --breakpoint-nav: 860px;
+        }
+    </style>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body class="m-0 flex min-h-screen flex-col bg-paper font-sans text-ink">
+    <div id="site-header"></div>
+
+    <main class="w-full flex-1">
+        <section class="relative w-full min-h-[88vh] overflow-hidden bg-ink text-paper" id="home">
+            <video class="pointer-events-none absolute inset-0 h-full w-full object-cover" id="hero-video" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=80" aria-hidden="true">
+                <source src="videos/hero.mp4?v=3" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(28,25,23,0.58),rgba(28,25,23,0.18),transparent)]"></div>
+            <div class="relative mx-auto flex min-h-[88vh] w-[min(1180px,calc(100%-40px))] flex-col items-center justify-center py-16 text-center">
+                <p class="mb-5 inline-flex items-center gap-2 text-sm text-paper/90">
+                    <span class="flex h-6 w-6 items-center justify-center rounded-full border border-paper/50 text-[10px]">▶</span>
+                    Elegant Home Interiors
+                </p>
+                <h1 class="text-4xl leading-[1.08] font-semibold nav:text-6xl">Want to know the cost of your dream home interiors today?</h1>
+                <p class="mt-5 max-w-[46ch] text-[1.02rem] leading-7 text-paper/80">Transform your home with professionally designed interiors. From kitchens to full-home styling, we create elegant, functional spaces perfectly tailored to your lifestyle.</p>
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <a class="rounded-full bg-accent px-6 py-3 text-sm font-medium text-ink" href="contact.html">Calculate Estimate</a>
+                    <a class="rounded-full border border-paper/55 px-6 py-3 text-sm font-medium text-paper" href="projects.html">Explore Designs</a>
+                </div>
+            </div>
+            
+            <a class="absolute top-1/2 right-6 flex h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-accent bg-accent/25 text-sm text-paper backdrop-blur-sm nav:right-10" href="#tours" aria-label="Watch house tour">▶</a>
+        </section>
+
+        <section class="py-20" id="services">
+            <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
+                <h2 class="text-4xl leading-tight font-semibold">Complete Interior Solutions For Every Home</h2>
+                <div class="mt-12 grid items-start gap-12 lg:grid-cols-[0.95fr_1.15fr]">
+                <div class="pb-12">
+                    <p class="mx-auto mt-0 max-w-[42ch] text-center text-[0.98rem] leading-7 text-muted">From modular kitchens to full home transformations, our design experts bring creativity, quality materials, and functional planning together.</p>
+                    <a class="mt-6 inline-flex rounded-full border border-ink/20 px-5 py-2.5 text-sm font-medium text-ink hover:bg-ink hover:text-paper" href="service.html">View All Services</a>
+                    <div class="relative mt-10 max-w-[420px]">
+                        <img class="h-64 w-[92%] rounded-[28px] object-cover" src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&w=900&q=80" alt="Kitchen interior">
+                        <img class="absolute right-0 -bottom-8 h-44 w-[58%] rounded-[28px] object-cover shadow-xl" src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=700&q=80" alt="Bedroom interior">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-start gap-4">
+                        <span class="w-8 pt-6 text-sm text-muted">01</span>
+                        <a class="flex-1 rounded-[22px] bg-ink p-6 text-paper" href="service.html#kitchen">
+                            <h3 class="text-xl font-semibold">Modular Kitchen Design</h3>
+                            <p class="mt-2 text-sm leading-6 text-paper/75">Smart and stylish kitchen interiors crafted to combine modern aesthetics, efficient layouts, and practical functionality for comfortable everyday cooking.</p>
+                        </a>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="w-8 pt-6 text-sm text-muted">02</span>
+                        <a class="group flex-1 rounded-[22px] bg-white p-6 shadow-sm transition-colors hover:bg-ink" href="service.html#full-home">
+                            <h3 class="text-xl font-semibold group-hover:text-paper">Full Home Interiors</h3>
+                            <p class="mt-2 text-sm leading-6 text-muted group-hover:text-paper/75">Complete home interior solutions including custom furniture, stylish décor, modern lighting, and thoughtful space planning for beautiful, functional living spaces.</p>
+                        </a>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="w-8 pt-6 text-sm text-muted">03</span>
+                        <a class="group flex-1 rounded-[22px] bg-white p-6 shadow-sm transition-colors hover:bg-ink" href="service.html#bedroom">
+                            <h3 class="text-xl font-semibold group-hover:text-paper">Luxury Bedroom Design</h3>
+                            <p class="mt-2 text-sm leading-6 text-muted group-hover:text-paper/75">Stylish bedroom interiors crafted with soft textures, modern design, and thoughtful details to ensure comfort, relaxation, and timeless elegance.</p>
+                        </a>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="w-8 pt-6 text-sm text-muted">04</span>
+                        <a class="group flex-1 rounded-[22px] bg-white p-6 shadow-sm transition-colors hover:bg-ink" href="service.html#renovation">
+                            <h3 class="text-xl font-semibold group-hover:text-paper">Home Renovation</h3>
+                            <p class="mt-2 text-sm leading-6 text-muted group-hover:text-paper/75">Enhance your current home with thoughtful interior design updates that refresh the space without losing its character.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="py-20" id="projects">
+            <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
+                <div class="flex flex-wrap items-start justify-between gap-4">
+                    <div>
+                        <h2 class="gallery-title text-[1.65rem] leading-tight font-semibold">Inspiration for home interior designs</h2>
+                        <p class="gallery-copy mt-2 max-w-[54ch] text-sm leading-6 text-muted">Give your homes a new look with these interior design ideas curated for you.</p>
+                    </div>
+                    <a class="mt-1 shrink-0 text-sm font-medium text-[#e85d04]" href="projects.html">View All →</a>
+                </div>
+                <div class="mt-8 grid auto-rows-[170px] grid-cols-2 gap-3 lg:h-[540px] lg:auto-rows-fr lg:grid-cols-12 lg:grid-rows-2">
+                    <a class="relative col-span-2 overflow-hidden rounded-2xl lg:col-span-6" href="projects.html#tours" data-open-home="oak" data-img-swap>
+                        <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1610276099788-b3ec27dec3c6?auto=format&fit=crop&w=1400&q=80" alt="Living Room">
+                        <img class="img-swap-next h-full w-full object-cover" src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1400&q=80" alt="" aria-hidden="true">
+                        <span class="absolute bottom-3 left-3 z-10 text-sm font-medium text-white drop-shadow">Living Room</span>
+                    </a>
+                    <a class="relative overflow-hidden rounded-2xl lg:col-span-3" href="projects.html#tours" data-open-home="harbour" data-img-swap>
+                        <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Studio Bedroom">
+                        <img class="img-swap-next h-full w-full object-cover" src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80" alt="" aria-hidden="true">
+                        <span class="absolute bottom-3 left-3 z-10 text-sm font-medium text-white drop-shadow">Studio Bedroom</span>
+                    </a>
+                    <a class="relative overflow-hidden rounded-2xl lg:col-span-3" href="projects.html#tours" data-open-home="noir" data-img-swap>
+                        <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Studio Bedroom">
+                        <img class="img-swap-next h-full w-full object-cover" src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=800&q=80" alt="" aria-hidden="true">
+                        <span class="absolute bottom-3 left-3 z-10 text-sm font-medium text-white drop-shadow">Studio Bedroom</span>
+                    </a>
+                    <a class="relative overflow-hidden rounded-2xl lg:col-span-4" href="projects.html#tours" data-open-home="oak" data-img-swap>
+                        <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=900&q=80" alt="Dining">
+                        <img class="img-swap-next h-full w-full object-cover" src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=900&q=80" alt="" aria-hidden="true">
+                        <span class="absolute bottom-3 left-3 z-10 text-sm font-medium text-white drop-shadow">Dining</span>
+                    </a>
+                    <a class="relative overflow-hidden rounded-2xl lg:col-span-5" href="projects.html#tours" data-open-home="harbour" data-img-swap>
+                        <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=1200&q=80" alt="Kitchen">
+                        <img class="img-swap-next h-full w-full object-cover" src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&w=1200&q=80" alt="" aria-hidden="true">
+                        <span class="absolute bottom-3 left-3 z-10 text-sm font-medium text-white drop-shadow">Kitchen</span>
+                    </a>
+                    <a class="relative overflow-hidden rounded-2xl lg:col-span-3" href="projects.html#tours" data-open-home="noir" data-img-swap>
+                        <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1595428774223-ef3381133d4c?auto=format&fit=crop&w=800&q=80" alt="Wardrobe">
+                        <img class="img-swap-next h-full w-full object-cover" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="" aria-hidden="true">
+                        <span class="absolute bottom-3 left-3 z-10 text-sm font-medium text-white drop-shadow">Wardrobe</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20" id="tours">
+            <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
+                <h2 class="text-4xl leading-tight font-semibold">Interactive house tours</h2>
+                <p class="mx-auto mt-4 max-w-[48ch] text-center text-[0.98rem] leading-7 text-muted">Click a home, walk the rooms, and open the numbered points to see materials, furniture, and lighting.</p>
+                <div class="mt-8 flex flex-wrap gap-2" id="tour-homes"></div>
+                <div class="mt-6 grid gap-5 lg:grid-cols-[minmax(0,1.45fr)_minmax(260px,0.7fr)]">
+                    <div class="relative min-h-[54vh] cursor-grab overflow-hidden rounded-[28px] bg-ink" id="tour-stage">
+                        <img class="absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-500" id="tour-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80" alt="Tour room" style="transform: scale(1.04); transform-origin: center;">
+                        <div class="absolute inset-0" id="tour-hotspots"></div>
+                        <button class="absolute top-1/2 left-4 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-ink/40 text-white backdrop-blur-sm" id="tour-prev" type="button" aria-label="Previous room">←</button>
+                        <button class="absolute top-1/2 right-4 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-ink/40 text-white backdrop-blur-sm" id="tour-next" type="button" aria-label="Next room">→</button>
+                    </div>
+                    <aside class="flex flex-col rounded-[28px] bg-white p-7 shadow-sm">
+                        <p class="text-xs tracking-[0.16em] text-accent uppercase" id="tour-kicker">Private family home · 4 rooms</p>
+                        <h3 class="mt-3 text-3xl font-semibold" id="tour-home-name">The Oak Residence</h3>
+                        <p class="mt-5 text-xl font-medium" id="tour-room-name">Living room</p>
+                        <p class="mt-3 text-[0.98rem] leading-7 text-muted" id="tour-room-copy">A calm gathering room built around oak, linen, and a long line of light.</p>
+                        <div class="mt-8 border-t border-ink/10 pt-6" id="tour-detail">
+                            <p class="text-xs tracking-[0.16em] text-accent uppercase" id="tour-detail-title">Click a numbered point</p>
+                            <p class="mt-3 text-[0.95rem] leading-7 text-muted" id="tour-detail-text">Each marker is a material, a piece of furniture, or a lighting decision from the room.</p>
+                        </div>
+                        <p class="mt-auto pt-8 text-xs tracking-[0.14em] text-muted uppercase" id="tour-progress">Room 1 of 4</p>
+                    </aside>
+                </div>
+                <div class="mt-5 flex gap-3 overflow-x-auto pb-2" id="tour-rooms"></div>
+            </div>
+        </section>
+
+        <section class="overflow-hidden bg-[#f3f1ee] py-16" id="about">
+            <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
+                <h2 class="text-[2rem] font-semibold">Why choose us</h2>
+                <div class="why-slider mt-10">
+                    <div class="why-track">
+                        <article class="why-card">
+                            <div class="why-icon">
+                                <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M46 10c16 2 30 16 30 32 0 18-16 32-34 32S10 62 10 44 20 12 38 10c4 0 6 0 8 0z"/></svg>
+                                <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                    <circle cx="24" cy="14" r="6" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 38c1.5-8 7-12 12-12s10.5 4 12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M24 22.5c2.2 0 4 1.9 4 4.4 0 3.4-4 6.6-4 6.6s-4-3.2-4-6.6c0-2.5 1.8-4.4 4-4.4z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <p>2000+ designers</p>
+                        </article>
+                        <article class="why-card">
+                            <div class="why-icon">
+                                <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M42 8c18 0 34 12 34 30s-12 34-30 36S12 62 10 44 16 10 36 8c2 0 4 0 6 0z"/></svg>
+                                <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                    <path d="M24 8 38 14v12c0 9.5-6.2 16.4-14 18.8C16.2 42.4 10 35.5 10 26V14L24 8z" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M17 24c0-2.4 1.8-4.2 4.2-4.2 1.6 0 2.8.8 3.8 2 1-1.2 2.2-2 3.8-2 2.4 0 4.2 1.8 4.2 4.2 0 4.6-8 8.8-8 8.8s-8-4.2-8-8.8z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <p>Lifetime warranty<sup>1</sup></p>
+                        </article>
+                        <article class="why-card">
+                            <div class="why-icon">
+                                <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M28 14c16-8 40 0 44 18 4 18-10 36-28 38S10 58 12 38 18 18 28 14z"/></svg>
+                                <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                    <rect x="10" y="12" width="24" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M16 8v6M28 8v6M10 20h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <text x="16" y="32" fill="currentColor" font-size="9" font-weight="600">45</text>
+                                    <circle cx="34" cy="34" r="8" fill="#f3f1ee" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M34 30v4.5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <p>45-day move-in guarantee<sup>2</sup></p>
+                        </article>
+                        <article class="why-card">
+                            <div class="why-icon">
+                                <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M50 10c16 6 26 22 24 36-2 16-18 28-34 28S8 60 10 42 18 10 38 8c4 0 8 1 12 2z"/></svg>
+                                <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                    <rect x="12" y="8" width="20" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M18 8.5h8v4h-8z" fill="currentColor"/>
+                                    <path d="M17 20h10M17 25h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <circle cx="31" cy="32" r="7" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M36 37 41 42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <p>146 quality checks</p>
+                        </article>
+                        <article class="why-card">
+                            <div class="why-icon">
+                                <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M38 8c18 0 36 14 36 32 0 16-14 32-32 34S8 62 8 44 14 10 34 8c1 0 3 0 4 0z"/></svg>
+                                <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                    <path d="M8 28 24 14l16 14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M14 26v12h20V26" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="20" y="30" width="8" height="8" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="34" cy="16" r="7" fill="#f3f1ee" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M34 13.2c1.1 0 2 .9 2 2.1 0 1.7-2 3.3-2 3.3s-2-1.6-2-3.3c0-1.2.9-2.1 2-2.1z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <p>1,00,000+ happy homes</p>
+                        </article>
+                        <article class="why-card">
+                            <div class="why-icon">
+                                <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M44 12c14-2 30 10 32 26 2 16-10 32-26 34S14 62 12 46 16 14 36 12c3 0 6 0 8 0z"/></svg>
+                                <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                    <rect x="10" y="16" width="12" height="22" rx="1" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="24" y="10" width="12" height="28" rx="1" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M13 21h6M13 26h6M27 16h6M27 21h6M27 26h6" stroke="currentColor" stroke-width="1.6"/>
+                                    <circle cx="36" cy="14" r="7" fill="#e0aa3e" stroke="#e0aa3e"/>
+                                    <text x="36" y="17.5" text-anchor="middle" fill="#fff" font-size="8" font-weight="700">146</text>
+                                </svg>
+                            </div>
+                            <p>100+ cities</p>
+                        </article>
+                        <article class="why-card" aria-hidden="true">
+                            <div class="why-icon">
+                                <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M46 10c16 2 30 16 30 32 0 18-16 32-34 32S10 62 10 44 20 12 38 10c4 0 6 0 8 0z"/></svg>
+                                <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                    <circle cx="24" cy="14" r="6" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 38c1.5-8 7-12 12-12s10.5 4 12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M24 22.5c2.2 0 4 1.9 4 4.4 0 3.4-4 6.6-4 6.6s-4-3.2-4-6.6c0-2.5 1.8-4.4 4-4.4z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <p>2000+ designers</p>
+                        </article>
+                        <article class="why-card" aria-hidden="true">
+                            <div class="why-icon">
+                                <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M42 8c18 0 34 12 34 30s-12 34-30 36S12 62 10 44 16 10 36 8c2 0 4 0 6 0z"/></svg>
+                                <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                    <path d="M24 8 38 14v12c0 9.5-6.2 16.4-14 18.8C16.2 42.4 10 35.5 10 26V14L24 8z" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M17 24c0-2.4 1.8-4.2 4.2-4.2 1.6 0 2.8.8 3.8 2 1-1.2 2.2-2 3.8-2 2.4 0 4.2 1.8 4.2 4.2 0 4.6-8 8.8-8 8.8s-8-4.2-8-8.8z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <p>Lifetime warranty<sup>1</sup></p>
+                        </article>
+                        <article class="why-card" aria-hidden="true">
+                            <div class="why-icon">
+                                <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M28 14c16-8 40 0 44 18 4 18-10 36-28 38S10 58 12 38 18 18 28 14z"/></svg>
+                                <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                    <rect x="10" y="12" width="24" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M16 8v6M28 8v6M10 20h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <text x="16" y="32" fill="currentColor" font-size="9" font-weight="600">45</text>
+                                    <circle cx="34" cy="34" r="8" fill="#f3f1ee" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M34 30v4.5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <p>45-day move-in guarantee<sup>2</sup></p>
+                        </article>
+                        <article class="why-card" aria-hidden="true">
+                            <div class="why-icon">
+                                <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M50 10c16 6 26 22 24 36-2 16-18 28-34 28S8 60 10 42 18 10 38 8c4 0 8 1 12 2z"/></svg>
+                                <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                    <rect x="12" y="8" width="20" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M18 8.5h8v4h-8z" fill="currentColor"/>
+                                    <path d="M17 20h10M17 25h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <circle cx="31" cy="32" r="7" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M36 37 41 42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <p>146 quality checks</p>
+                        </article>
+                        <article class="why-card" aria-hidden="true">
+                            <div class="why-icon">
+                                <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M38 8c18 0 36 14 36 32 0 16-14 32-32 34S8 62 8 44 14 10 34 8c1 0 3 0 4 0z"/></svg>
+                                <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                    <path d="M8 28 24 14l16 14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M14 26v12h20V26" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="20" y="30" width="8" height="8" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="34" cy="16" r="7" fill="#f3f1ee" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M34 13.2c1.1 0 2 .9 2 2.1 0 1.7-2 3.3-2 3.3s-2-1.6-2-3.3c0-1.2.9-2.1 2-2.1z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <p>1,00,000+ happy homes</p>
+                        </article>
+                        <article class="why-card" aria-hidden="true">
+                            <div class="why-icon">
+                                <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M44 12c14-2 30 10 32 26 2 16-10 32-26 34S14 62 12 46 16 14 36 12c3 0 6 0 8 0z"/></svg>
+                                <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                    <rect x="10" y="16" width="12" height="22" rx="1" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="24" y="10" width="12" height="28" rx="1" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M13 21h6M13 26h6M27 16h6M27 21h6M27 26h6" stroke="currentColor" stroke-width="1.6"/>
+                                    <circle cx="36" cy="14" r="7" fill="#e0aa3e" stroke="#e0aa3e"/>
+                                    <text x="36" y="17.5" text-anchor="middle" fill="#fff" font-size="8" font-weight="700">146</text>
+                                </svg>
+                            </div>
+                            <p>100+ cities</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20" id="estimate">
+            <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
+                <h2 class="text-center text-4xl font-semibold">Get Instant Interior Cost Estimate</h2>
+                <p class="mx-auto mt-3 max-w-[48ch] text-center text-[0.98rem] leading-7 text-muted">Choose the space you want to design and instantly calculate the estimated interior cost.</p>
+                <div class="mt-12 grid gap-6 nav:grid-cols-3">
+                    <article class="overflow-hidden rounded-[28px] bg-white shadow-sm">
+                        <div class="relative" data-img-swap>
+                            <img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=900&q=80" alt="Full home interior">
+                            <img class="img-swap-next h-52 w-full object-cover" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="" aria-hidden="true">
+                            <div class="absolute inset-x-0 bottom-0 z-10 bg-[linear-gradient(to_top,rgba(28,25,23,0.72),transparent)] p-5">
+                                <h3 class="text-lg font-semibold text-paper">Full Home Interior</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm leading-6 text-muted">Complete interior planning for your entire home.</p>
+                            <a class="mt-5 inline-flex rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-ink" href="contact.html">Calculate Cost →</a>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden rounded-[28px] bg-white shadow-sm">
+                        <div class="relative" data-img-swap>
+                            <img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&w=900&q=80" alt="Kitchen interior">
+                            <img class="img-swap-next h-52 w-full object-cover" src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=900&q=80" alt="" aria-hidden="true">
+                            <div class="absolute inset-x-0 bottom-0 z-10 bg-[linear-gradient(to_top,rgba(28,25,23,0.72),transparent)] p-5">
+                                <h3 class="text-lg font-semibold text-paper">Kitchen Interior</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm leading-6 text-muted">Custom modular kitchen designs with smart storage.</p>
+                            <a class="mt-5 inline-flex rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-ink" href="contact.html">Calculate Cost →</a>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden rounded-[28px] bg-white shadow-sm">
+                        <div class="relative" data-img-swap>
+                            <img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Wardrobe design">
+                            <img class="img-swap-next h-52 w-full object-cover" src="https://images.unsplash.com/photo-1595428774223-ef3381133d4c?auto=format&fit=crop&w=900&q=80" alt="" aria-hidden="true">
+                            <div class="absolute inset-x-0 bottom-0 z-10 bg-[linear-gradient(to_top,rgba(28,25,23,0.72),transparent)] p-5">
+                                <h3 class="text-lg font-semibold text-paper">Wardrobe Design</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm leading-6 text-muted">Stylish wardrobes designed for maximum space utilisation.</p>
+                            <a class="mt-5 inline-flex rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-ink" href="contact.html">Calculate Cost →</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="mt-8 flex justify-center gap-2" aria-hidden="true">
+                    <span class="h-2 w-2 rounded-full bg-accent/30"></span>
+                    <span class="h-2 w-2 rounded-full bg-accent/30"></span>
+                    <span class="h-2 w-2 rounded-full bg-accent"></span>
+                    <span class="h-2 w-2 rounded-full bg-accent/30"></span>
+                    <span class="h-2 w-2 rounded-full bg-accent/30"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="mx-auto grid w-[min(1180px,calc(100%-32px))] items-center gap-12 lg:grid-cols-2">
+                <div>
+                    <h2 class="text-4xl leading-tight font-semibold">What Our Happy Clients Are Saying</h2>
+                    <div class="mt-10 grid gap-8 nav:grid-cols-2">
+                        <blockquote>
+                            <div class="flex items-center gap-3">
+                                <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Priya Shah">
+                                <div>
+                                    <p class="text-sm font-semibold">Priya Shah</p>
+                                    <p class="text-accent">★★★★★</p>
+                                </div>
+                            </div>
+                            <p class="mt-4 text-sm leading-7 text-muted">The tour made the scheme real before we spent on joinery. The living room is exactly as we walked it.</p>
+                        </blockquote>
+                        <blockquote>
+                            <div class="flex items-center gap-3">
+                                <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd722bf5d?auto=format&fit=crop&w=200&q=80" alt="Arjun Mehta">
+                                <div>
+                                    <p class="text-sm font-semibold">Arjun Mehta</p>
+                                    <p class="text-accent">★★★★★</p>
+                                </div>
+                            </div>
+                            <p class="mt-4 text-sm leading-7 text-muted">Clear costs, calm rooms, and a kitchen that actually works. Ligo treated the house like a home, not a showroom.</p>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="relative mx-auto h-80 w-80">
+                    <div class="absolute inset-10 rounded-full border border-dashed border-accent/50"></div>
+                    <img class="absolute top-1/2 left-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-full object-cover ring-4 ring-paper" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Client">
+                    <img class="absolute top-4 left-1/2 h-12 w-12 -translate-x-1/2 rounded-full object-cover ring-4 ring-paper" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80" alt="Client">
+                    <img class="absolute top-1/2 right-4 h-12 w-12 -translate-y-1/2 rounded-full object-cover ring-4 ring-paper" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Client">
+                    <img class="absolute bottom-6 left-1/2 h-12 w-12 -translate-x-1/2 rounded-full object-cover ring-4 ring-paper" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Client">
+                    <img class="absolute top-1/2 left-4 h-12 w-12 -translate-y-1/2 rounded-full object-cover ring-4 ring-paper" src="https://images.unsplash.com/photo-1507003211169-0a1dd722bf5d?auto=format&fit=crop&w=200&q=80" alt="Client">
+                    <img class="absolute top-16 right-12 h-10 w-10 rounded-full object-cover ring-4 ring-paper" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Client">
+                    <img class="absolute bottom-16 left-10 h-10 w-10 rounded-full object-cover ring-4 ring-paper" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Client">
+                </div>
+            </div>
+        </section>
+
+        <section class="px-4 pb-16" id="faq">
+            <div class="mx-auto grid w-[min(1180px,100%)] gap-8 rounded-[32px] bg-ink p-8 text-paper nav:grid-cols-[0.8fr_1.2fr] nav:p-12">
+                <div>
+                    <h2 class="text-3xl leading-tight font-semibold">Frequently Asked Questions</h2>
+                    <a class="mt-8 inline-flex rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-ink" href="contact.html">Ask a Question</a>
+                </div>
+                <div class="divide-y divide-paper/15">
+                    <article data-faq-item class="is-open py-4">
+                        <button class="flex w-full items-center justify-between gap-4 py-2 text-left text-lg font-medium" data-faq type="button">
+                            How much does interior design cost?
+                            <span class="text-accent" data-faq-icon>−</span>
+                        </button>
+                        <p class="mt-2 max-w-[52ch] text-sm leading-7 text-paper/70" data-faq-panel>It depends on the rooms and the level of joinery. After a consult we share a clear range for design, furniture, and execution so you can decide before drawings go to site.</p>
+                    </article>
+                    <article data-faq-item class="py-4">
+                        <button class="flex w-full items-center justify-between gap-4 py-2 text-left text-lg font-medium" data-faq type="button">
+                            How long does a project take?
+                            <span class="text-accent" data-faq-icon>+</span>
+                        </button>
+                        <p class="mt-2 hidden max-w-[52ch] text-sm leading-7 text-paper/70" data-faq-panel>A single room can be designed in a few weeks. A full home usually runs a few months, with the tour and drawings first so site work stays on a known plan.</p>
+                    </article>
+                    <article data-faq-item class="py-4">
+                        <button class="flex w-full items-center justify-between gap-4 py-2 text-left text-lg font-medium" data-faq type="button">
+                            Do you personally recommend furniture?
+                            <span class="text-accent" data-faq-icon>+</span>
+                        </button>
+                        <p class="mt-2 hidden max-w-[52ch] text-sm leading-7 text-paper/70" data-faq-panel>Yes. We specify pieces for scale and comfort, mix makers where it helps, and can include a styling package so the rooms feel finished on day one.</p>
+                    </article>
+                    <article data-faq-item class="py-4">
+                        <button class="flex w-full items-center justify-between gap-4 py-2 text-left text-lg font-medium" data-faq type="button">
+                            Can I see designs before starting?
+                            <span class="text-accent" data-faq-icon>+</span>
+                        </button>
+                        <p class="mt-2 hidden max-w-[52ch] text-sm leading-7 text-paper/70" data-faq-panel>The house tours on this site are how we share a scheme. You walk the rooms, open the details, and only then do we lock materials and joinery.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/include.js"></script>
+    <script src="js/tours.js"></script>
+</body>
+</html>

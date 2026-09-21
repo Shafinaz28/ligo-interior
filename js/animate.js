@@ -41,7 +41,7 @@
             return;
         }
 
-        const items = section.querySelectorAll("h2, h3, article, blockquote, .service-card, #tour-stage, aside");
+        const items = section.querySelectorAll("h2, h3, article, blockquote, .service-card, aside");
         if (!items.length) {
             return;
         }

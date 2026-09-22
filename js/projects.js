@@ -25,13 +25,10 @@
         card.type = "button";
         card.className = "client-card";
         const cover = project.images[0]
-            ? '<img src="' + imagePath(project, project.images[0]) + '" alt="' + project.name + '">'
-            : '<div class="client-card-fallback">' + project.name.charAt(0) + "</div>";
-        card.innerHTML =
-            cover +
-            '<span class="client-card-meta">' +
-            "<strong>" + project.name + "</strong>" +
-            "</span>";
+            ? '<img src="' + imagePath(project, project.images[0]) + '" alt="Interior project">'
+            : '<div class="client-card-fallback"></div>';
+        card.setAttribute("aria-label", "Open project photos");
+        card.innerHTML = cover + '<span class="client-card-plus" aria-hidden="true">+</span>';
         card.addEventListener("click", function () {
             openProject(project, 0);
         });
@@ -61,8 +58,8 @@
         }
         index = (next + active.images.length) % active.images.length;
         stage.src = imagePath(active, active.images[index]);
-        stage.alt = active.name + " — photo " + (index + 1);
-        title.textContent = active.name;
+        stage.alt = "Project photo " + (index + 1);
+        title.textContent = "";
         renderThumbs();
     }
 
@@ -74,7 +71,7 @@
         if (!project.images.length) {
             stage.removeAttribute("src");
             stage.alt = "";
-            title.textContent = project.name;
+            title.textContent = "";
             thumbs.innerHTML = "";
             return;
         }

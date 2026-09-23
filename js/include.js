@@ -119,7 +119,7 @@ async function loadQuoteModal() {
 
 async function loadSiteChrome() {
     await Promise.allSettled([
-        loadPartial("site-header", "header/header.html?v=11"),
+        loadPartial("site-header", "header/header.html?v=12"),
         loadPartial("site-footer", "footer/footer.html?v=5"),
         loadQuoteModal()
     ]);

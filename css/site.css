@@ -613,7 +613,15 @@ h3 {
     background: #d49b28;
 }
 
+.quote-open-btn-bar {
+    display: none;
+}
+
 @media (min-width: 860px) {
+    .quote-open-btn-bar {
+        display: inline-flex;
+    }
+
     .quote-open-btn-menu {
         display: none;
     }

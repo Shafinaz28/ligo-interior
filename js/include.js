@@ -1,3 +1,35 @@
+(function showLoader() {
+    let loader = document.getElementById("site-loader");
+    if (!loader) {
+        loader = document.createElement("div");
+        loader.id = "site-loader";
+        loader.className = "site-loader";
+        loader.innerHTML =
+            '<div class="site-loader-inner">' +
+            '<img class="logo-horizontal invert" src="images/logo.png" alt="">' +
+            '<div class="site-loader-bar"><span></span></div>' +
+            "</div>";
+        document.documentElement.appendChild(loader);
+    }
+
+    function hideLoader() {
+        if (!loader || loader.classList.contains("is-done")) {
+            return;
+        }
+        loader.classList.add("is-done");
+        window.setTimeout(function () {
+            if (loader.parentNode) {
+                loader.parentNode.removeChild(loader);
+            }
+        }, 500);
+    }
+
+    window.addEventListener("load", function () {
+        window.setTimeout(hideLoader, 500);
+    });
+    window.setTimeout(hideLoader, 4000);
+})();
+
 function mountQuoteModal(modal) {
     if (!modal) {
         return null;
@@ -119,8 +151,8 @@ async function loadQuoteModal() {
 
 async function loadSiteChrome() {
     await Promise.allSettled([
-        loadPartial("site-header", "header/header.html?v=12"),
-        loadPartial("site-footer", "footer/footer.html?v=5"),
+        loadPartial("site-header", "header/header.html?v=13"),
+        loadPartial("site-footer", "footer/footer.html?v=7"),
         loadQuoteModal()
     ]);
 

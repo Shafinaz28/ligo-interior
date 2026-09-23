@@ -21,9 +21,15 @@
     <style>
         html { scroll-behavior: smooth; }
     </style>
-    <link rel="stylesheet" href="css/site.css?v=21">
+    <link rel="stylesheet" href="css/site.css?v=28">
 </head>
 <body class="m-0 flex min-h-screen flex-col bg-paper font-sans text-ink">
+    <div id="site-loader" class="site-loader">
+        <div class="site-loader-inner">
+            <img class="logo-horizontal invert" src="images/logo.png" alt="">
+            <div class="site-loader-bar"><span></span></div>
+        </div>
+    </div>
     <div id="site-header"></div>
 
     <main class="w-full flex-1">
@@ -165,7 +171,7 @@
     <div class="footer-grid">
         <div>
             <a class="mb-4 inline-block" href="index.html" aria-label="Ligo Interiors home">
-                <img class="block h-auto w-[108px] object-contain" src="images/logo.png" alt="Ligo Interiors">
+                <img class="logo-horizontal" src="images/logo.png" alt="Ligo Interiors">
             </a>
             <p class="footer-blurb">End-to-end interior design for homes that feel complete — kitchens, suites, living rooms, and full renovations.</p>
             <button class="quote-open-btn footer-quote-btn" type="button" data-quote-open>Get a Quote</button>
@@ -183,11 +189,6 @@
             <a href="service.html">Services</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
-            <a href="index.html#services">Interior Solutions</a>
-            <a href="index.html#projects">Design Gallery</a>
-            <a href="index.html#about">Why Choose Us</a>
-            <a href="index.html#testimonials">Testimonials</a>
-            <a href="index.html#faq">FAQs</a>
         </nav>
         <nav class="footer-links" aria-label="Services">
             <h2>Services</h2>
@@ -203,7 +204,6 @@
             <h2>Contact</h2>
             <a href="mailto:ligointerior@gmail.com">ligointerior@gmail.com</a>
             <a href="tel:+919108001595">+91 91080 01595</a>
-            <a href="https://wa.me/919108001595?text=Hi%20Ligo%20Interiors%2C%20I%20would%20like%20an%20interior%20cost%20estimate." target="_blank" rel="noopener noreferrer">WhatsApp</a>
             <a href="https://maps.google.com/?q=484,+19th+Main+Rd,+4th+T+Block+East,+Pattabhirama+Nagar,+Jayanagar,+Bengaluru,+Karnataka+560041" target="_blank" rel="noopener noreferrer">484, 19th Main Rd, 4th T Block East, Pattabhirama Nagar, Jayanagar, Bengaluru, Karnataka 560041, India</a>
         </div>
     </div>
@@ -212,11 +212,11 @@
         <p>Designed with care.</p>
     </div>
 </footer>
-<a class="fixed right-5 bottom-5 z-[120] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg hover:scale-105" href="https://wa.me/919108001595?text=Hi%20Ligo%20Interiors%2C%20I%20would%20like%20an%20interior%20cost%20estimate." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+<a class="fixed wa-float z-[120] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg hover:scale-105" href="https://wa.me/919108001595?text=Hi%20Ligo%20Interiors%2C%20I%20would%20like%20an%20interior%20cost%20estimate." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <svg class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.8c2.17 0 4.2.85 5.73 2.38a8.07 8.07 0 0 1 2.38 5.73c0 4.47-3.64 8.11-8.11 8.11-1.41 0-2.79-.36-4.01-1.05l-.29-.17-3.12.82.83-3.04-.18-.31a8.1 8.1 0 0 1-1.23-4.36c0-4.47 3.64-8.11 8.1-8.11zm-2.7 4.32c-.17-.37-.35-.38-.51-.39h-.43c-.15 0-.4.06-.61.3-.21.23-.8.78-.8 1.9s.82 2.21.93 2.36c.12.15 1.58 2.54 3.9 3.46 1.93.77 2.32.62 2.74.58.42-.04 1.35-.55 1.54-1.09.19-.54.19-1 .13-1.09-.06-.1-.23-.15-.48-.27-.25-.12-1.47-.73-1.7-.81-.23-.08-.4-.12-.56.12-.17.23-.64.81-.79.98-.15.17-.29.19-.54.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.37-.76-1.87z"></path></svg>
 </a>
     </div>
-    <script src="js/include.js?v=16"></script>
+    <script src="js/include.js?v=19"></script>
     <script src="js/contact.js"></script>
 </body>
 </html>

@@ -41,7 +41,7 @@
             return;
         }
 
-        const items = section.querySelectorAll("h2, h3, article, blockquote, .service-card, aside");
+        const items = section.querySelectorAll("h2, article, blockquote, .service-card, aside, .service-link");
         if (!items.length) {
             return;
         }

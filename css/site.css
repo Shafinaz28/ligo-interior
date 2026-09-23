@@ -53,7 +53,7 @@ h3 {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    padding: 28px 0 20px;
+    padding: 40px 0 28px;
 }
 
 .section-bg {
@@ -129,14 +129,14 @@ h3 {
 
 @media (min-width: 860px) {
     .service-section {
-        padding: 40px 0 32px;
+        padding: 56px 0 44px;
     }
 }
 
 .service-list {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 14px;
     width: 100%;
     max-width: 520px;
     margin-left: auto;
@@ -147,14 +147,36 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
-    border-radius: 18px;
+    gap: 12px;
+    border-radius: 20px;
     background: rgba(255, 255, 255, 0.88);
-    padding: 10px 14px;
+    padding: 20px 18px;
     box-shadow: 0 1px 6px rgba(28, 25, 23, 0.06);
     color: inherit;
     text-decoration: none;
     backdrop-filter: blur(8px);
+}
+
+.service-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 50%;
+    background: #1c1917;
+    color: #e0aa3e;
+}
+
+.service-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.service-link-featured .service-icon,
+.service-link:hover .service-icon {
+    background: #e0aa3e;
+    color: #1c1917;
 }
 
 .service-link-featured {
@@ -219,14 +241,8 @@ h3 {
     .service-link {
         flex-direction: row;
         align-items: flex-start;
-        gap: 12px;
-        padding: 14px 16px;
-    }
-
-    .service-num {
-        width: 28px;
-        padding-top: 3px;
-        text-align: left;
+        gap: 16px;
+        padding: 20px 22px;
     }
 
     .service-link h3 {
@@ -240,8 +256,8 @@ h3 {
 }
 
 .service-more {
-    margin-top: 12px;
-    padding-bottom: 8px;
+    margin-top: 22px;
+    padding-bottom: 12px;
     text-align: center;
 }
 

@@ -49,8 +49,8 @@ function openQuoteModal(service) {
     }
     mountQuoteModal(modal);
     const select = document.getElementById("quote-service");
-    if (service && select) {
-        select.value = service;
+    if (select) {
+        select.value = service || "";
     }
     modal.hidden = false;
     modal.classList.add("is-open");
@@ -99,13 +99,21 @@ document.addEventListener("submit", function (event) {
     const phone = document.getElementById("quote-phone").value.trim();
     const email = document.getElementById("quote-email").value.trim();
     const address = document.getElementById("quote-address").value.trim();
-    const service = document.getElementById("quote-service").value.trim();
+    const service = (document.getElementById("quote-service") || {}).value || "";
+    if (!service) {
+        window.alert("Please select a service.");
+        return;
+    }
+    const whatsapp = document.getElementById("quote-whatsapp") && document.getElementById("quote-whatsapp").checked
+        ? "Yes"
+        : "No";
     const body = encodeURIComponent(
         "Name: " + name +
         "\nPhone: " + phone +
         "\nEmail: " + email +
         "\nAddress: " + address +
-        "\nService: " + service
+        "\nService: " + service +
+        "\nWhatsApp estimate: " + whatsapp
     );
     window.location.href =
         "mailto:ligointerior@gmail.com?subject=" +
@@ -137,7 +145,7 @@ async function loadQuoteModal() {
             return;
         }
 
-        const response = await fetch("header/quote-modal.html?v=1");
+        const response = await fetch("header/quote-modal.html?v=3");
         if (!response.ok) {
             return;
         }

@@ -11,12 +11,20 @@ function bindContact() {
         const email = document.getElementById("contact-email").value.trim();
         const address = document.getElementById("contact-address").value.trim();
         const service = document.getElementById("contact-service").value.trim();
+        if (!service) {
+            window.alert("Please select a service.");
+            return;
+        }
+        const whatsapp = document.getElementById("contact-whatsapp") && document.getElementById("contact-whatsapp").checked
+            ? "Yes"
+            : "No";
         const body = encodeURIComponent(
             "Name: " + name +
             "\nPhone: " + phone +
             "\nEmail: " + email +
             "\nAddress: " + address +
-            "\nService: " + service
+            "\nService: " + service +
+            "\nWhatsApp estimate: " + whatsapp
         );
         window.location.href =
             "mailto:ligointerior@gmail.com?subject=" +

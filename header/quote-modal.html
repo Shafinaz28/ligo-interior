@@ -1,13 +1,13 @@
 <div class="quote-overlay" id="quote-modal" hidden>
-    <div class="quote-card" role="dialog" aria-modal="true" aria-labelledby="quote-title">
+        <div class="quote-card contact-card" role="dialog" aria-modal="true" aria-labelledby="quote-title">
         <div class="quote-card-top">
             <img class="quote-logo" src="images/logo.png" alt="Ligo Interiors">
             <button class="quote-close" type="button" data-quote-close aria-label="Close quote form">×</button>
         </div>
         <div class="quote-card-body">
-            <p class="quote-kicker">Free studio consult</p>
-            <h2 id="quote-title">Get A Free Quote</h2>
-            <p class="quote-lead">Pick the rooms you want designed. We’ll reply with a clear first cost range.</p>
+            <div class="quote-intro">
+                <h2 id="quote-title">Get A Quote</h2>
+            </div>
             <form id="quote-form">
                 <div class="quote-grid">
                     <label class="quote-field">Name
@@ -22,13 +22,13 @@
                             <input id="quote-phone" name="phone" type="tel" placeholder="+91 00000 00000" required>
                         </span>
                     </label>
-                    <label class="quote-field quote-grid-full">Email
+                    <label class="quote-field">Email
                         <span class="field-wrap">
                             <svg class="field-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m5 8 7 5 7-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             <input id="quote-email" name="email" type="email" placeholder="you@email.com" required>
                         </span>
                     </label>
-                    <label class="quote-field quote-grid-full">Services
+                    <label class="quote-field">Services
                         <span class="field-wrap">
                             <svg class="field-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9h16v10H4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 9V7.5A4 4 0 0 1 16 7.5V9" stroke="currentColor" stroke-width="1.8"/></svg>
                             <select id="quote-service" name="service" required>
@@ -49,14 +49,16 @@
                             <textarea id="quote-address" name="address" placeholder="House no, street, area, city" required></textarea>
                         </span>
                     </label>
-                    <label class="quote-agree quote-grid-full">
-                        <input id="quote-whatsapp" name="whatsapp" type="checkbox">
-                        <span>Send the estimate on WhatsApp</span>
-                    </label>
-                    <label class="quote-agree quote-grid-full">
-                        <input id="quote-agree" name="agree" type="checkbox" required>
-                        <span>I agree to be contacted about this enquiry</span>
-                    </label>
+                    <div class="quote-agrees quote-grid-full">
+                        <label class="quote-agree">
+                            <input id="quote-whatsapp" name="whatsapp" type="checkbox">
+                            <span>Send the estimate on WhatsApp</span>
+                        </label>
+                        <label class="quote-agree">
+                            <input id="quote-agree" name="agree" type="checkbox" required>
+                            <span>I agree to be contacted about this enquiry</span>
+                        </label>
+                    </div>
                 </div>
                 <button class="quote-submit" type="submit">
                     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h14M13 6l7 6-7 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>

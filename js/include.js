@@ -34,7 +34,9 @@ function mountQuoteModal(modal) {
     if (!modal) {
         return null;
     }
-    document.documentElement.appendChild(modal);
+    if (document.body && modal.parentElement !== document.body) {
+        document.body.appendChild(modal);
+    }
     return modal;
 }
 
@@ -45,6 +47,11 @@ function getQuoteModal() {
 function openQuoteModal(service) {
     const modal = getQuoteModal();
     if (!modal) {
+        loadQuoteModal().then(function () {
+            if (getQuoteModal()) {
+                openQuoteModal(service);
+            }
+        });
         return;
     }
     mountQuoteModal(modal);
@@ -145,7 +152,7 @@ async function loadQuoteModal() {
             return;
         }
 
-        const response = await fetch("header/quote-modal.html?v=3");
+        const response = await fetch("header/quote-modal.html?v=8");
         if (!response.ok) {
             return;
         }

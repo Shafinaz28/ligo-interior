@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Ligo Interiors</title>
+    <title>Project Enquiry — Ligo Interiors</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
@@ -14,14 +18,15 @@
             --color-ink: #1c1917;
             --color-muted: #6b635c;
             --color-accent: #e0aa3e;
-            --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+            --font-sans: "Cormorant Garamond", "Times New Roman", serif;
+            --font-serif: "Playfair Display", "Times New Roman", serif;
             --breakpoint-nav: 860px;
         }
     </style>
     <style>
         html { scroll-behavior: smooth; }
     </style>
-    <link rel="stylesheet" href="css/site.css?v=38">
+    <link rel="stylesheet" href="css/site.css?v=49">
 </head>
 <body class="m-0 flex min-h-screen flex-col bg-paper font-sans text-ink">
     <div id="site-loader" class="site-loader">
@@ -37,12 +42,55 @@
             <img class="absolute inset-0 h-full w-full object-cover" src="images/projects/PUNIT/DSC01281.avif" alt="A living interior from a Ligo project">
             <div class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(28,25,23,0.28),rgba(28,25,23,0.48))]"></div>
             <div class="relative mx-auto flex min-h-[42vh] w-[min(1180px,calc(100%-40px))] flex-col items-center justify-center py-12 text-center">
-                <p class="text-xs font-bold tracking-[0.2em] text-accent uppercase">Contact</p>
-                <h1 class="mt-3 text-4xl leading-[1.08] font-bold nav:text-5xl">Get An Interior Cost Estimate Today.</h1>
+                <p class="text-xs font-bold tracking-[0.2em] text-accent uppercase">Project Enquiry</p>
+                <h1 class="mt-3 text-4xl leading-[1.08] font-bold nav:text-5xl">See How We Can Work Together.</h1>
             </div>
         </section>
 
-        <section class="contact-block py-6 nav:py-8">
+        <section class="enquiry-copy">
+            <div class="mx-auto w-[min(860px,calc(100%-32px))]">
+                <h2>Why Clients Choose Us</h2>
+                <blockquote class="enquiry-quote">
+                    <p>“Almost everyone who visits us tells us this doesn’t look like an Indian apartment — it’s like stepping into Europe. Ligo handled everything end-to-end, made the impossible possible, and translated our vision into reality. Truly professional and effortless.”</p>
+                    <cite>— Bangalore client, C-suite executive</cite>
+                </blockquote>
+                <blockquote class="enquiry-quote">
+                    <p>“We used Ligo Interiors for our Prestige Golfshire home. They have excellent taste, and it was a pleasure working with the studio. Would highly recommend them.”</p>
+                    <cite>— Prestige Golfshire homeowner</cite>
+                </blockquote>
+
+                <h2>How We Help</h2>
+                <ul class="enquiry-help">
+                    <li>
+                        <strong>Effortless decisions</strong>
+                        <span>We narrow endless choices down to a few curated options, so every decision feels easy and right.</span>
+                    </li>
+                    <li>
+                        <strong>Total project ownership</strong>
+                        <span>From vendors to timelines, we manage it all. You’ll have one point of contact, and zero stress.</span>
+                    </li>
+                    <li>
+                        <strong>Designs with depth</strong>
+                        <span>Homes that feel meaningful, layered, and timeless — built for real life, not templates.</span>
+                    </li>
+                    <li>
+                        <strong>A home that feels like you</strong>
+                        <span>Elegant, enduring, and livable, reflecting your story and success.</span>
+                    </li>
+                </ul>
+
+                <h2>The Ligo Method</h2>
+                <p class="enquiry-lead">Every home we design is treated as a complete story — considered, tailored, and timeless. Because of the depth of involvement, we take on only a few projects each year.</p>
+                <p class="enquiry-lead"><strong>Design Development (1–2 months)</strong> – Concept creation, detailed drawings, and 3D visualizations.</p>
+                <p class="enquiry-lead"><strong>Build &amp; Styling (3–6 months)</strong> – Execution, sourcing, project management, and final styling.</p>
+                <p class="enquiry-note">Our turnkey projects typically begin at ₹30 lakhs for a 3-bedroom residence — an investment in craftsmanship, detail, and quiet luxury.</p>
+                <div class="enquiry-cta">
+                    <button class="enquiry-cta-btn" type="button" data-show-enquiry>See How We Can Work Together</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-block py-6 nav:py-8" id="project-enquiry">
             <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
                 <h2 class="text-[1.55rem] leading-tight font-semibold nav:text-[1.75rem]">Tell Us About The House.</h2>
                 <p class="mx-auto mt-1.5 max-w-[46ch] text-center text-sm leading-5 text-muted">Share a few notes. We will follow up with a clear range, a room plan, and a date to walk the scheme.</p>
@@ -148,48 +196,6 @@
                 </div>
             </div>
         </section>
-
-        <section class="bg-[#f3f1ee] px-4 py-16">
-            <div class="mx-auto grid w-[min(1180px,100%)] gap-5 nav:grid-cols-3">
-                <article class="rounded-[28px] bg-white p-6 text-center shadow-sm">
-                    <div class="why-icon mx-auto">
-                        <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M46 10c16 2 30 16 30 32 0 18-16 32-34 32S10 62 10 44 20 12 38 10c4 0 6 0 8 0z"/></svg>
-                        <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                            <rect x="12" y="10" width="24" height="30" rx="3" stroke="currentColor" stroke-width="2"/>
-                            <path d="M18 18h12M18 24h12M18 30h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="mt-4 font-semibold">Cost Transparency</h3>
-                    <p class="mx-auto mt-2 max-w-[36ch] text-sm leading-6 text-muted">Line-by-line estimates for joinery, furniture, and finishes — no hidden extras.</p>
-                </article>
-                <article class="rounded-[28px] bg-white p-6 text-center shadow-sm">
-                    <div class="why-icon mx-auto">
-                        <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M42 8c18 0 34 12 34 30s-12 34-30 36S12 62 10 44 16 10 36 8c2 0 4 0 6 0z"/></svg>
-                        <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                            <rect x="8" y="14" width="14" height="22" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <rect x="26" y="10" width="14" height="26" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 20h6M12 25h6M30 16h6M30 21h6M30 26h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="mt-4 font-semibold">Modular Interiors</h3>
-                    <p class="mx-auto mt-2 max-w-[36ch] text-sm leading-6 text-muted">Kitchens and wardrobes designed as furniture, then built to the millimetre.</p>
-                </article>
-                <article class="rounded-[28px] bg-white p-6 text-center shadow-sm">
-                    <div class="why-icon mx-auto">
-                        <svg class="why-blob" viewBox="0 0 88 88" aria-hidden="true"><path d="M50 10c16 6 26 22 24 36-2 16-18 28-34 28S8 60 10 42 18 10 38 8c4 0 8 1 12 2z"/></svg>
-                        <svg class="why-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                            <rect x="10" y="12" width="20" height="26" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M16 12.5h8v4h-8z" fill="currentColor"/>
-                            <path d="M15 22h10M15 27h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <circle cx="32" cy="32" r="7" stroke="currentColor" stroke-width="2"/>
-                            <path d="M37 37 42 42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="mt-4 font-semibold">See Designs First</h3>
-                    <p class="mx-auto mt-2 max-w-[36ch] text-sm leading-6 text-muted">Drawings and project photos before a single finish is ordered.</p>
-                </article>
-            </div>
-        </section>
     </main>
 
     <div id="site-footer">
@@ -214,7 +220,7 @@
             <a href="about.html">About</a>
             <a href="service.html">Services</a>
             <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html">Project Enquiry</a>
         </nav>
         <nav class="footer-links" aria-label="Services">
             <h2>Services</h2>
@@ -242,7 +248,7 @@
     <svg class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.8c2.17 0 4.2.85 5.73 2.38a8.07 8.07 0 0 1 2.38 5.73c0 4.47-3.64 8.11-8.11 8.11-1.41 0-2.79-.36-4.01-1.05l-.29-.17-3.12.82.83-3.04-.18-.31a8.1 8.1 0 0 1-1.23-4.36c0-4.47 3.64-8.11 8.1-8.11zm-2.7 4.32c-.17-.37-.35-.38-.51-.39h-.43c-.15 0-.4.06-.61.3-.21.23-.8.78-.8 1.9s.82 2.21.93 2.36c.12.15 1.58 2.54 3.9 3.46 1.93.77 2.32.62 2.74.58.42-.04 1.35-.55 1.54-1.09.19-.54.19-1 .13-1.09-.06-.1-.23-.15-.48-.27-.25-.12-1.47-.73-1.7-.81-.23-.08-.4-.12-.56.12-.17.23-.64.81-.79.98-.15.17-.29.19-.54.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.37-.76-1.87z"></path></svg>
 </a>
     </div>
-    <script src="js/include.js?v=21"></script>
-    <script src="js/contact.js?v=2"></script>
+    <script src="js/include.js?v=22"></script>
+    <script src="js/contact.js?v=4"></script>
 </body>
 </html>

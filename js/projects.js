@@ -27,8 +27,10 @@
         const cover = project.images[0]
             ? '<img src="' + imagePath(project, project.images[0]) + '" alt="Interior project">'
             : '<div class="client-card-fallback"></div>';
-        card.setAttribute("aria-label", "Open project photos");
-        card.innerHTML = cover + '<span class="client-card-plus" aria-hidden="true">+</span>';
+        card.setAttribute("aria-label", "Open " + project.name + " project photos");
+        card.innerHTML = cover +
+            '<span class="client-card-name">' + project.name + '</span>' +
+            '<span class="client-card-plus" aria-hidden="true">+</span>';
         card.addEventListener("click", function () {
             openProject(project, 0);
         });
@@ -58,8 +60,8 @@
         }
         index = (next + active.images.length) % active.images.length;
         stage.src = imagePath(active, active.images[index]);
-        stage.alt = "Project photo " + (index + 1);
-        title.textContent = "";
+        stage.alt = (active.name || "Project") + " photo " + (index + 1);
+        title.textContent = active.name || "";
         renderThumbs();
     }
 

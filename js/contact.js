@@ -1,5 +1,29 @@
 function bindContact() {
     const form = document.getElementById("contact-form");
+    const enquiry = document.getElementById("project-enquiry");
+    const openBtns = document.querySelectorAll("[data-show-enquiry]");
+
+    function showEnquiry() {
+        if (!enquiry) {
+            return;
+        }
+        enquiry.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.setTimeout(function () {
+            const name = document.getElementById("contact-name");
+            if (name) {
+                name.focus();
+            }
+        }, 400);
+    }
+
+    openBtns.forEach(function (btn) {
+        btn.addEventListener("click", showEnquiry);
+    });
+
+    if (window.location.hash === "#project-enquiry") {
+        showEnquiry();
+    }
+
     if (!form) {
         return;
     }

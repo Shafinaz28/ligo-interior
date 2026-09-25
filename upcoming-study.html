@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming 3D Study — Ligo Interiors</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-paper: #fcfaf6;
+            --color-ink: #1c1917;
+            --color-muted: #6b635c;
+            --color-accent: #e0aa3e;
+            --font-sans: "Cormorant Garamond", "Times New Roman", serif;
+            --font-serif: "Playfair Display", "Times New Roman", serif;
+            --breakpoint-nav: 860px;
+        }
+    </style>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+    <link rel="stylesheet" href="css/site.css?v=53">
+</head>
+<body class="m-0 flex min-h-screen flex-col bg-paper font-sans text-ink">
+    <div id="site-loader" class="site-loader">
+        <div class="site-loader-inner">
+            <img class="logo-horizontal invert" src="images/logo.png" alt="">
+            <div class="site-loader-bar"><span></span></div>
+        </div>
+    </div>
+    <div id="site-header"></div>
+
+    <main class="w-full flex-1">
+        <section class="upcoming-hero">
+            <img src="images/projects/UPCOMING/study-chairs.jpg" alt="Upcoming 3D study with blue chairs">
+        </section>
+
+        <section class="upcoming-intro">
+            <div class="upcoming-intro-top">
+                <h1>Upcoming 3D</h1>
+                <a class="upcoming-view" href="#renders">View Project</a>
+            </div>
+            <p>Upcoming 3D project — a dark millwork study with coffered lighting, blue leather, and paneled joinery. Designed as a complete room before build, so every shelf, desk, and seating line is considered in craft and proportion.</p>
+            <div class="upcoming-meta">
+                <p><span>Location</span> Bengaluru, Karnataka</p>
+                <p><span>Category</span> Study · 3D Visualizations</p>
+            </div>
+        </section>
+
+        <section class="upcoming-grid" id="renders">
+            <button type="button" data-upcoming-open="images/projects/UPCOMING/study-grid.jpg">
+                <img src="images/projects/UPCOMING/study-grid.jpg" alt="Upcoming 3D study wall with blue panels">
+            </button>
+            <button type="button" data-upcoming-open="images/projects/UPCOMING/study-desk.jpg">
+                <img src="images/projects/UPCOMING/study-desk.jpg" alt="Upcoming 3D study desk and millwork">
+            </button>
+            <button type="button" data-upcoming-open="images/projects/UPCOMING/study-chairs.jpg">
+                <img src="images/projects/UPCOMING/study-chairs.jpg" alt="Upcoming 3D study seating">
+            </button>
+        </section>
+    </main>
+
+    <div id="project-lightbox" class="project-lightbox">
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close gallery">×</button>
+        <p class="lightbox-kicker">Upcoming 3D</p>
+        <img id="lightbox-image" alt="">
+    </div>
+
+    <div id="site-footer"></div>
+    <script src="js/include.js?v=24"></script>
+    <script>
+        (function () {
+            const lightbox = document.getElementById("project-lightbox");
+            const stage = document.getElementById("lightbox-image");
+            const closeBtn = document.getElementById("lightbox-close");
+            function open(src, alt) {
+                stage.src = src;
+                stage.alt = alt || "";
+                lightbox.classList.add("is-open");
+                document.body.style.overflow = "hidden";
+            }
+            function close() {
+                lightbox.classList.remove("is-open");
+                document.body.style.overflow = "";
+            }
+            document.querySelectorAll("[data-upcoming-open]").forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    const img = btn.querySelector("img");
+                    open(btn.getAttribute("data-upcoming-open"), img ? img.alt : "");
+                });
+            });
+            closeBtn.addEventListener("click", close);
+            lightbox.addEventListener("click", function (event) {
+                if (event.target === lightbox) {
+                    close();
+                }
+            });
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") {
+                    close();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -159,7 +159,7 @@ async function loadQuoteModal() {
 
 async function loadSiteChrome() {
     await Promise.allSettled([
-        loadPartial("site-header", "header/header.html?v=13"),
+        loadPartial("site-header", "header/header.html?v=15"),
         loadPartial("site-footer", "footer/footer.html?v=7"),
         loadQuoteModal()
     ]);
@@ -168,7 +168,8 @@ async function loadSiteChrome() {
     headerScript.src = "header/header.js?v=10";
     document.body.appendChild(headerScript);
 
-    const page = (window.location.pathname.split("/").pop() || "index.html").toLowerCase().replace(/\.html$/, "") || "index";
+    const pageName = (window.location.pathname.split("/").pop() || "index.html").toLowerCase().replace(/\.html$/, "") || "index";
+    const page = (pageName === "upcoming-project" || pageName === "upcoming-study") ? "projects" : pageName;
     document.querySelectorAll("#main-nav a").forEach(function (link) {
         const href = (link.getAttribute("href") || "").toLowerCase().split("#")[0].replace(/\.html$/, "") || "index";
         if (href === page) {

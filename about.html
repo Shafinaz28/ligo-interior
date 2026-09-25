@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About — Ligo Interiors</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
@@ -14,14 +18,15 @@
             --color-ink: #1c1917;
             --color-muted: #6b635c;
             --color-accent: #e0aa3e;
-            --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+            --font-sans: "Cormorant Garamond", "Times New Roman", serif;
+            --font-serif: "Playfair Display", "Times New Roman", serif;
             --breakpoint-nav: 860px;
         }
     </style>
     <style>
         html { scroll-behavior: smooth; }
     </style>
-    <link rel="stylesheet" href="css/site.css?v=35">
+    <link rel="stylesheet" href="css/site.css?v=56">
 </head>
 <body class="m-0 flex min-h-screen flex-col bg-paper font-sans text-ink">
     <div id="site-loader" class="site-loader">
@@ -42,16 +47,32 @@
             </div>
         </section>
 
-        <section class="py-16">
+        <section class="quiet-luxury py-14 nav:py-16">
             <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
                 <h2 class="text-4xl leading-tight font-semibold">A Quieter Kind Of Luxury For Real Homes.</h2>
-                <div class="mt-10 grid items-center gap-12 lg:grid-cols-2">
+                <div class="mt-8 grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
                     <div>
                         <p class="mx-auto max-w-[48ch] text-[1.02rem] leading-8 text-muted lg:mx-0">Ligo Interiors plans rooms for light, movement, and the way a house actually holds a day. We start with how you live, then draw, price, and finish so the scheme you walk through is the one that gets built.</p>
                         <p class="mx-auto mt-4 max-w-[48ch] text-[1.02rem] leading-8 text-muted lg:mx-0">Kitchens, suites, living rooms, and full renovations are treated as one house — proportion, material, and a calm palette that lasts.</p>
                     </div>
-                    <img class="h-[420px] w-full rounded-[28px] object-cover" src="images/projects/PUNIT/DSC01281.avif" alt="Warm living room with custom millwork">
+                    <img class="h-[380px] w-full rounded-[28px] object-cover nav:h-[420px]" src="images/projects/PUNIT/DSC01281.avif" alt="Warm living room with custom millwork">
                 </div>
+            </div>
+        </section>
+
+        <section class="enquiry-copy" id="who-we-are">
+            <div class="mx-auto w-[min(860px,calc(100%-32px))]">
+                <h2>Who We Are</h2>
+                <p class="enquiry-kicker">Spaces Crafted for Reality — Not Just Rendered</p>
+                <p class="enquiry-lead">Ligo Interiors is a Bengaluru-based turnkey interior execution firm driven by a deeply considered approach to craftsmanship, material quality, and structural precision.</p>
+                <p class="enquiry-lead">We believe exceptional spaces are not achieved through outsourced labor or rushed assembly, but through the dedicated skill of our in-house artisan carpenters and expert painters.</p>
+                <p class="enquiry-lead">By keeping our execution entirely in-house, we ensure hands-on involvement, consistent accountability, and a seamless translation from digital design to physical reality.</p>
+
+                <h2>Our Story</h2>
+                <p class="enquiry-kicker">Bringing Bespoke Visions to Life — With Absolute Precision</p>
+                <p class="enquiry-lead">Ligo Interiors is a specialized interior execution studio led by an uncompromising dedication to custom carpentry and flawless surface finishes.</p>
+                <p class="enquiry-lead">We believe true luxury lies in the details. That is why we rely exclusively on our in-house team of skilled craftsmen rather than third-party contractors, ensuring total quality control over every intricate curve and custom panel.</p>
+                <p class="enquiry-lead">From artisan manual carpentry to premium Duco and Polycoat applications, we manage the entire execution process to provide a stress-free experience that perfectly bridges the gap between vision and reality.</p>
             </div>
         </section>
 
@@ -163,7 +184,7 @@
             <a href="about.html">About</a>
             <a href="service.html">Services</a>
             <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html">Project Enquiry</a>
         </nav>
         <nav class="footer-links" aria-label="Services">
             <h2>Services</h2>
@@ -191,6 +212,6 @@
     <svg class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.8c2.17 0 4.2.85 5.73 2.38a8.07 8.07 0 0 1 2.38 5.73c0 4.47-3.64 8.11-8.11 8.11-1.41 0-2.79-.36-4.01-1.05l-.29-.17-3.12.82.83-3.04-.18-.31a8.1 8.1 0 0 1-1.23-4.36c0-4.47 3.64-8.11 8.1-8.11zm-2.7 4.32c-.17-.37-.35-.38-.51-.39h-.43c-.15 0-.4.06-.61.3-.21.23-.8.78-.8 1.9s.82 2.21.93 2.36c.12.15 1.58 2.54 3.9 3.46 1.93.77 2.32.62 2.74.58.42-.04 1.35-.55 1.54-1.09.19-.54.19-1 .13-1.09-.06-.1-.23-.15-.48-.27-.25-.12-1.47-.73-1.7-.81-.23-.08-.4-.12-.56.12-.17.23-.64.81-.79.98-.15.17-.29.19-.54.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.37-.76-1.87z"></path></svg>
 </a>
     </div>
-    <script src="js/include.js?v=21"></script>
+    <script src="js/include.js?v=22"></script>
 </body>
 </html>

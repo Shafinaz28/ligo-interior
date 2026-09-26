@@ -3,6 +3,18 @@ html, body {
     max-width: 100%;
 }
 
+:root {
+    --font-heading: "Playfair Display", Georgia, serif;
+    --font-sub: "Cormorant Garamond", Georgia, serif;
+    --font-body: "Libre Baskerville", Georgia, serif;
+    --color-heading: #e0aa3e;
+    --color-body: #6b635c;
+}
+
+html {
+    font-size: 14px;
+}
+
 html.quote-open,
 html.quote-open body {
     overflow: hidden;
@@ -16,10 +28,9 @@ html.quote-open body {
 }
 
 h1,
-h2,
-h3 {
-    font-family: "Times New Roman", Times, serif !important;
-    color: #e0aa3e !important;
+h2 {
+    font-family: var(--font-heading) !important;
+    color: var(--color-heading) !important;
     font-weight: 500;
     letter-spacing: 0.1em;
     line-height: 1.25;
@@ -31,13 +42,27 @@ h3 {
     white-space: normal;
 }
 
+h3 {
+    font-family: var(--font-sub) !important;
+    color: var(--color-heading) !important;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: none;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+    white-space: normal;
+}
+
 h1,
 h2 {
-    font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+    font-size: clamp(1.35rem, 2.8vw, 1.85rem);
 }
 
 h3 {
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    font-size: clamp(0.92rem, 1.6vw, 1.08rem);
 }
 
 body,
@@ -45,12 +70,12 @@ button,
 input,
 select,
 textarea {
-    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-family: var(--font-body);
 }
 
 body {
-    font-size: 1.08rem;
-    color: #111111;
+    font-size: 0.95rem;
+    color: var(--color-body);
 }
 
 p,
@@ -77,7 +102,7 @@ label,
 .text-muted,
 .text-ink,
 .text-ink\/70 {
-    color: #000000 !important;
+    color: var(--color-body) !important;
 }
 
 .bg-ink p,
@@ -97,22 +122,85 @@ label,
     color: #e0aa3e !important;
 }
 
-.hero-lead {
-    max-width: 36ch;
-    margin-left: auto;
-    margin-right: auto;
+.hero-title {
+    max-width: none;
+    margin: 12px auto 0;
+    color: var(--color-heading) !important;
+    font-family: var(--font-heading) !important;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.18;
     text-align: center;
+    text-transform: none !important;
+    white-space: normal;
+}
+
+.hero-title span {
+    display: block;
+}
+
+@media (min-width: 700px) {
+    .hero-title span {
+        white-space: nowrap;
+    }
+}
+
+#home .hero-title {
+    margin-top: 0;
+}
+
+.hero-lead {
+    max-width: 42ch;
+    margin: 22px auto 0;
+    color: #fcfaf6 !important;
+    font-family: var(--font-body);
+    font-size: clamp(1.02rem, 1.7vw, 1.18rem);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.7;
+    text-align: center;
+    text-transform: none;
 }
 
 .hero-lead br {
     display: none;
 }
 
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+    padding: 12px 22px;
+    border: 1px solid #e0aa3e;
+    border-radius: 0;
+    background: #e0aa3e;
+    color: #1c1917;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.hero-cta:hover {
+    background: #c99632;
+    border-color: #c99632;
+    color: #1c1917;
+}
+
 @media (min-width: 860px) {
+    .hero-title {
+        font-size: clamp(2.1rem, 3.4vw, 3.1rem);
+    }
+
     .hero-lead {
-        max-width: none;
-        font-size: 1.08rem;
-        line-height: 1.7;
+        max-width: 46ch;
     }
 
     .hero-lead br {
@@ -132,7 +220,7 @@ label,
 .core-offering {
     padding: 52px 16px 56px;
     background: #fff;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-body);
 }
 
 .core-offering-inner {
@@ -145,7 +233,7 @@ label,
     max-width: none;
     width: 100%;
     color: #e0aa3e;
-    font-family: "Times New Roman", Times, serif !important;
+    font-family: var(--font-heading) !important;
     font-size: clamp(1.6rem, 3.4vw, 2.2rem);
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -158,7 +246,7 @@ label,
 .core-offering-intro {
     margin: 0 0 14px;
     color: #111111;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-body);
     font-size: 1.12rem;
     font-weight: 400;
     line-height: 1.7;
@@ -185,7 +273,7 @@ label,
     border-radius: 0;
     background: transparent;
     color: #111111;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-body);
     font-size: 1.12rem;
     line-height: 1.75;
 }
@@ -198,7 +286,7 @@ label,
     margin: 0;
     max-width: none;
     color: #111111;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-body);
     font-size: 1.12rem;
     line-height: 1.75;
     text-align: left;
@@ -237,40 +325,57 @@ label,
 
 .what-we-do-copy {
     padding: 0;
+    text-align: left;
 }
 
 .what-we-do-copy h2 {
-    margin: 0 0 16px;
+    margin: 0 0 18px;
     width: 100%;
     color: #e0aa3e;
     font-size: clamp(1.6rem, 3.4vw, 2.2rem);
     font-weight: 500;
     letter-spacing: 0.1em;
     line-height: 1.25;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     white-space: normal;
 }
 
 .what-we-do-copy p {
-    margin: 0 0 18px;
-    color: #000000;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 1.12rem;
-    line-height: 1.7;
+    margin: 0 0 16px;
+    color: var(--color-body);
+    font-family: var(--font-sub);
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.6;
+    text-align: left;
+    text-transform: none;
 }
 
 .what-we-do-copy ul {
     margin: 0;
-    padding: 0 0 0 1.15rem;
-    color: #000000;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 1.12rem;
-    line-height: 1.85;
+    padding: 0 0 0 1.2rem;
+    color: var(--color-body);
+    font-family: var(--font-body);
+    font-size: 1.02rem;
+    line-height: 1.9;
+    letter-spacing: 0;
+    list-style: disc;
+    text-align: left;
+    text-transform: none;
+}
+
+.what-we-do-copy li {
+    text-transform: none;
 }
 
 .what-we-do-copy li::marker {
-    color: #000000;
+    color: var(--color-body);
+}
+
+.what-we-do-copy li::marker {
+    color: var(--color-body);
 }
 
 @media (min-width: 860px) {
@@ -298,7 +403,7 @@ label,
 .makes-us {
     padding: 56px 0 64px;
     background: #fff;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-body);
 }
 
 .makes-us h2 {
@@ -317,12 +422,14 @@ label,
 .makes-us-lead {
     margin: 0 auto 36px;
     color: #111111;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-sub);
     font-size: clamp(1.15rem, 2.2vw, 1.4rem);
     font-style: italic;
     font-weight: 400;
+    letter-spacing: 0.02em;
     line-height: 1.5;
     text-align: center;
+    text-transform: none;
 }
 
 .makes-us-list {
@@ -350,12 +457,12 @@ label,
 .makes-us-list h3 {
     margin: 0 0 8px;
     color: #e0aa3e !important;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-sub) !important;
     font-size: 1.12rem;
     font-style: italic;
     font-weight: 500;
     line-height: 1.45;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
     text-transform: none !important;
 }
 
@@ -368,7 +475,7 @@ label,
 .makes-us-list p {
     margin: 0;
     color: #111111;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-body);
     font-size: 1.08rem;
     font-style: normal;
     font-weight: 400;
@@ -422,8 +529,7 @@ label,
     display: block;
     margin: 0 0 6px;
     color: #e0aa3e;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 0.72rem;
+    font-family: var(--font-sub);
     font-weight: 600;
     letter-spacing: 0.22em;
 }
@@ -444,8 +550,7 @@ label,
     margin: 0 0 12px;
     width: 100%;
     color: #e0aa3e;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 0.92rem;
+    font-family: var(--font-heading);
     font-weight: 500;
     line-height: 1.35;
     letter-spacing: 0.08em;
@@ -457,7 +562,7 @@ label,
 .process-step p {
     margin: 0;
     max-width: 28ch;
-    color: #000000;
+    color: var(--color-body);
     font-size: 0.98rem;
     line-height: 1.6;
     text-align: center;
@@ -466,7 +571,7 @@ label,
 .process-foot {
     margin: 28px auto 0;
     max-width: 62ch;
-    color: #000000;
+    color: var(--color-body);
     font-size: 1rem;
     font-style: italic;
     line-height: 1.55;
@@ -569,7 +674,7 @@ label,
     display: block;
     margin-bottom: 4px;
     color: #111111;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-body);
     font-size: 1.06rem;
     font-weight: 600;
     text-align: left;
@@ -592,7 +697,7 @@ label,
 
 .enquiry-lead strong {
     color: #111111;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-body);
     font-weight: 600;
 }
 
@@ -615,7 +720,7 @@ label,
     background: #e0aa3e;
     color: #111111;
     cursor: pointer;
-    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-family: var(--font-body);
     font-size: 0.82rem;
     font-weight: 600;
     letter-spacing: 0.16em;
@@ -894,18 +999,20 @@ header .logo-horizontal {
     position: relative;
     padding: 10px 0;
     color: #8a8279;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 0.95rem;
+    font-family: var(--font-sub);
+    font-size: 0.82rem;
     font-weight: 500;
+    letter-spacing: 0.1em;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .nav-link:hover {
-    color: #000000;
+    color: var(--color-body);
 }
 
 .nav-link.is-current {
-    color: #000000;
+    color: var(--color-body);
     font-weight: 600;
 }
 
@@ -1026,7 +1133,8 @@ header .logo-horizontal {
 @media (min-width: 860px) {
     .nav-link {
         padding: 0;
-        font-size: 0.875rem;
+        font-size: 0.82rem;
+        letter-spacing: 0.1em;
     }
 
     .nav-link.is-current::after {
@@ -1161,12 +1269,14 @@ header .logo-horizontal {
 
 .why-card p {
     margin: 10px 0 0;
-    max-width: 14ch;
+    max-width: 16ch;
     color: #111111;
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     font-weight: 500;
+    letter-spacing: 0.08em;
     line-height: 1.3;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .work-icon {
@@ -1257,8 +1367,9 @@ header .logo-horizontal {
     color: #111111;
     font-size: 0.92rem;
     font-weight: 700;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.08em;
     line-height: 1.2;
+    text-transform: uppercase;
 }
 
 .site-footer h2 {
@@ -1492,7 +1603,7 @@ header .logo-horizontal {
     border-radius: 999px;
     background: #9a7428;
     color: #f4f1c8;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-body);
     font-size: 1.05rem;
     font-weight: 600;
     letter-spacing: 0.02em;
@@ -1682,8 +1793,8 @@ header .logo-horizontal {
 }
 
 .quote-overlay .quote-card {
-    width: min(680px, 100%);
-    max-width: 680px;
+    width: min(500px, calc(100% - 24px));
+    max-width: 500px;
     margin: auto;
 }
 
@@ -1691,15 +1802,15 @@ header .logo-horizontal {
     position: relative;
     display: block;
     box-sizing: border-box;
-    width: min(680px, 100%);
+    width: min(500px, calc(100% - 24px));
     max-height: none;
     margin: 0 auto 32px;
-    overflow: visible;
-    border: 1px solid rgba(224, 170, 62, 0.22);
-    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid #e0aa3e;
+    border-radius: 16px;
     background: #fff;
     padding: 0;
-    box-shadow: 0 28px 70px rgba(28, 25, 23, 0.38);
+    box-shadow: 0 18px 44px rgba(28, 25, 23, 0.32);
 }
 
 .quote-card-top {
@@ -1708,30 +1819,30 @@ header .logo-horizontal {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    padding: 14px 18px;
+    padding: 10px 14px;
     background: linear-gradient(180deg, #221e1b 0%, #1c1917 100%);
     border-bottom: 1px solid rgba(224, 170, 62, 0.28);
 }
 
 .quote-logo {
     display: block;
-    height: 34px;
+    height: 28px;
     width: auto;
-    max-width: 180px;
+    max-width: 150px;
     object-fit: contain;
 }
 
 .quote-card-body {
-    overflow: visible;
-    padding: 20px 22px 24px;
+    overflow: hidden;
+    padding: 14px 16px 16px;
     background:
         radial-gradient(ellipse at top, rgba(224, 170, 62, 0.08), transparent 52%),
         #fff;
 }
 
 .quote-intro {
-    margin: 0 0 16px;
-    padding-bottom: 14px;
+    margin: 0 0 12px;
+    padding-bottom: 10px;
     border-bottom: 1px solid rgba(28, 25, 23, 0.08);
     text-align: center;
 }
@@ -1742,9 +1853,9 @@ header .logo-horizontal {
 
 .quote-field {
     display: block;
-    color: #111111;
-    font-size: 0.78rem;
-    font-weight: 700;
+    color: #6f675f !important;
+    font-size: 0.72rem;
+    font-weight: 600;
     letter-spacing: 0.02em;
 }
 
@@ -1761,12 +1872,13 @@ header .logo-horizontal {
     display: block;
     box-sizing: border-box;
     width: 100%;
-    border: 1px solid rgba(28, 25, 23, 0.1);
+    max-width: 100%;
+    border: 1px solid #e4dcd2;
     background: #fcfaf6;
-    color: #111111;
-    font-size: 0.9rem;
+    color: #6f675f;
+    font-size: 0.8rem;
     font-weight: 400;
-    box-shadow: inset 0 1px 2px rgba(28, 25, 23, 0.04);
+    box-shadow: none;
 }
 
 .quote-field input::placeholder,
@@ -1782,23 +1894,25 @@ header .logo-horizontal {
     outline: none;
     border-color: #e0aa3e;
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(224, 170, 62, 0.18);
+    box-shadow: 0 0 0 2px rgba(224, 170, 62, 0.16);
 }
 
 .quote-field input[type="text"],
 .quote-field input[type="tel"],
 .quote-field input[type="email"],
 .quote-field select {
-    height: 48px;
-    border-radius: 999px;
-    padding: 0 16px 0 42px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0 14px 0 38px;
 }
 
 .quote-field textarea {
-    min-height: 88px;
-    border-radius: 18px;
-    padding: 14px 16px 14px 42px;
-    resize: vertical;
+    min-height: 64px;
+    max-height: 88px;
+    border-radius: 10px;
+    padding: 12px 14px 12px 38px;
+    resize: none;
+    overflow: auto;
 }
 
 .quote-kicker {
@@ -1816,7 +1930,7 @@ header .logo-horizontal {
 .contact-card h3 {
     margin: 0;
     color: #e0aa3e;
-    font-size: 1.55rem;
+    font-size: 1.12rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     line-height: 1.25;
@@ -1829,7 +1943,7 @@ header .logo-horizontal {
 .quote-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 10px;
 }
 
 .quote-grid-full {
@@ -1871,10 +1985,10 @@ header .logo-horizontal {
 .quote-agrees {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 14px 16px;
-    border: 1px solid rgba(28, 25, 23, 0.08);
-    border-radius: 18px;
+    gap: 8px;
+    padding: 10px 12px;
+    border: 1px solid #e4dcd2;
+    border-radius: 10px;
     background: #fcfaf6;
 }
 
@@ -1884,8 +1998,8 @@ header .logo-horizontal {
     align-items: flex-start;
     gap: 10px;
     cursor: pointer;
-    color: #111111;
-    font-size: 0.86rem;
+    color: #6f675f !important;
+    font-size: 0.76rem;
     font-weight: 500;
     line-height: 1.35;
 }
@@ -1935,8 +2049,8 @@ header .logo-horizontal {
 }
 
 .quote-overlay .quote-card {
-    width: min(680px, 100%);
-    max-width: 680px;
+    width: min(500px, calc(100% - 24px));
+    max-width: 500px;
     margin: auto;
 }
 
@@ -1945,24 +2059,24 @@ header .logo-horizontal {
 }
 
 .contact-card .quote-card-top {
-    padding: 14px 18px;
+    padding: 10px 14px;
 }
 
 .contact-card .quote-card-body {
-    padding: 20px 20px 22px;
+    padding: 14px 16px 16px;
 }
 
 .contact-card .quote-intro {
-    margin-bottom: 14px;
-    padding-bottom: 12px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .contact-card .quote-grid {
-    gap: 12px;
+    gap: 10px;
 }
 
 .contact-card .quote-submit {
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
 .contact-map {
@@ -2038,7 +2152,9 @@ header .logo-horizontal {
     color: #111111;
     font-size: 0.875rem;
     font-weight: 600;
+    letter-spacing: 0.1em;
     line-height: 1.2;
+    text-transform: uppercase;
     cursor: pointer;
 }
 
@@ -2073,18 +2189,18 @@ header .logo-horizontal {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin: 18px 0 0;
+    margin: 12px 0 0;
     border: 0;
-    border-radius: 999px;
+    border-radius: 10px;
     background: #e0aa3e;
-    padding: 14px 22px;
+    padding: 11px 18px;
     color: #111111;
-    font-size: 0.95rem;
+    font-size: 0.86rem;
     font-weight: 700;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
     text-transform: none;
     cursor: pointer;
-    box-shadow: 0 10px 22px rgba(224, 170, 62, 0.28);
+    box-shadow: none;
 }
 
 .quote-submit:hover {
@@ -2166,14 +2282,16 @@ header .logo-horizontal {
     margin-bottom: 18px;
 }
 
-.upcoming-intro h1 {
+.upcoming-intro h1,
+.upcoming-intro .hero-title {
     margin: 0;
-    color: #e0aa3e;
-    font-size: clamp(2rem, 4vw, 2.7rem);
+    color: var(--color-heading) !important;
+    font-size: clamp(1.5rem, 3.2vw, 2.4rem);
+    font-style: italic;
     font-weight: 500;
-    letter-spacing: 0.1em;
+    letter-spacing: 0;
     text-align: left;
-    text-transform: uppercase;
+    text-transform: none !important;
 }
 
 .upcoming-view {
@@ -2274,14 +2392,44 @@ span.core-offering-intro,
 .why-card p,
 .upcoming-intro p,
 .upcoming-meta {
-    color: #000000 !important;
-    font-family: "Times New Roman", Times, serif !important;
+    color: var(--color-body) !important;
+    font-family: var(--font-body) !important;
+}
+
+h1,
+h2,
+.hero-title,
+.process-step h3 {
+    font-family: var(--font-heading) !important;
+}
+
+h3,
+.makes-us-lead,
+.makes-us-list h3,
+.enquiry-kicker,
+.nav-link,
+.why-card p,
+.what-we-do-copy p,
+.process-num {
+    font-family: var(--font-sub) !important;
+}
+
+.hero-lead,
+.process-step p,
+.makes-us-list p,
+.core-offering-intro,
+.core-offering-note,
+.core-offering-list li,
+.what-we-do-copy li,
+.enquiry-lead,
+.enquiry-note {
+    font-family: var(--font-body) !important;
 }
 
 li::marker,
 .core-offering-list li::marker,
 .what-we-do-copy li::marker {
-    color: #000000 !important;
+    color: var(--color-body) !important;
 }
 
 .bg-ink p,
@@ -2382,4 +2530,41 @@ article:has(.work-icon).is-tapped,
     .upcoming-grid button.is-tapped {
         animation: none;
     }
+}
+
+.quote-card label,
+.quote-field,
+.quote-agree,
+.quote-agree span,
+.quote-field input,
+.quote-field select,
+.quote-field textarea {
+    color: #6f675f !important;
+}
+
+.quote-field input::placeholder,
+.quote-field textarea::placeholder,
+.quote-field select {
+    color: #8a8279 !important;
+    font-size: 0.78rem;
+}
+
+h1,
+h2,
+h3,
+.hero-title,
+.core-offering h2,
+.what-we-do-copy h2,
+.makes-us h2,
+.makes-us-list h3,
+.process-section h2,
+.process-step h3,
+.process-num,
+.enquiry-copy h2,
+.quote-card h2,
+.quote-card h3,
+.quote-kicker,
+.service-link h3,
+.upcoming-intro h1 {
+    color: var(--color-heading) !important;
 }

@@ -22,7 +22,7 @@
 
     const hero = document.querySelector("#home, main > section:first-of-type");
     if (hero) {
-        const heroBits = hero.querySelectorAll("h1, p, a, .mt-8");
+        const heroBits = hero.querySelectorAll("h1, p, a, button, .mt-8");
         gsap.from(heroBits, {
             y: 32,
             opacity: 0,

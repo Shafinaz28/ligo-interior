@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
@@ -18,15 +18,15 @@
             --color-ink: #111111;
             --color-muted: #111111;
             --color-accent: #e0aa3e;
-            --font-sans: "Cormorant Garamond", "Times New Roman", serif;
-            --font-serif: "Times New Roman", Times, serif;
+            --font-sans: "Libre Baskerville", Georgia, serif;
+            --font-serif: "Playfair Display", Georgia, serif;
             --breakpoint-nav: 860px;
         }
     </style>
     <style>
         html { scroll-behavior: smooth; }
     </style>
-    <link rel="stylesheet" href="css/site.css?v=85">
+    <link rel="stylesheet" href="css/site.css?v=97">
 </head>
 <body class="m-0 flex min-h-screen flex-col bg-paper font-sans text-ink">
     <div id="site-loader" class="site-loader">
@@ -44,13 +44,9 @@
             </video>
             <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(28,25,23,0.58),rgba(28,25,23,0.18),transparent)]"></div>
             <div class="relative mx-auto flex min-h-[88vh] w-[min(1180px,calc(100%-40px))] flex-col items-center justify-center py-16 text-center">
-                <p class="mb-4 text-sm font-bold tracking-[0.18em] text-accent uppercase">Jayanagar, Bengaluru</p>
-                <h1 class="text-4xl leading-[1.08] font-bold nav:text-6xl">Ligo Interiors</h1>
-                <p class="hero-lead mt-5 text-[1.02rem] leading-7 text-paper">Celebrating 2 years of mastery in manual carpentry and bespoke finishes.<br>Step into our interactive digital studio to visualize how raw materials<br>are transformed into luxury living spaces.</p>
-                <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-                    <button class="rounded-full bg-accent px-6 py-3 text-sm font-medium text-ink" type="button" data-quote-open>Get Free Quote</button>
-                    <a class="rounded-full border border-paper/55 px-6 py-3 text-sm font-medium text-paper" href="projects.html">Enter Studio</a>
-                </div>
+                <h1 class="hero-title"><span>Luxury Interiors Shaped</span><span>by Clarity and Intention</span></h1>
+                <p class="hero-lead">We design new-build villas, large residences, and experiential homes for clients who value thoughtful planning, refined aesthetics, and a calm, structured process — from vision to completion.</p>
+                <button class="hero-cta" type="button" data-quote-open>Start the conversation</button>
             </div>
         </section>
 
@@ -478,7 +474,7 @@
             <a href="about.html">About</a>
             <a href="service.html">Services</a>
             <a href="projects.html">Projects</a>
-            <a href="contact.html">Project Enquiry</a>
+            <a href="contact.html">Projects Inquiry</a>
         </nav>
         <nav class="footer-links" aria-label="Services">
             <h2>Services</h2>
@@ -578,7 +574,7 @@
         </div>
     </div>
 
-    <script src="js/include.js?v=34"></script>
+    <script src="js/include.js?v=35"></script>
     <script src="js/testimonials.js"></script>
     <script src="js/faq.js"></script>
 </body>

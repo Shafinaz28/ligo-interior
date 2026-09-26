@@ -166,22 +166,25 @@ async function loadQuoteModal() {
 
 async function loadSiteChrome() {
     await Promise.allSettled([
-        loadPartial("site-header", "header/header.html?v=15"),
+        loadPartial("site-header", "header/header.html?v=18"),
         loadPartial("site-footer", "footer/footer.html?v=7"),
         loadQuoteModal()
     ]);
 
     const headerScript = document.createElement("script");
-    headerScript.src = "header/header.js?v=10";
+    headerScript.src = "header/header.js?v=13";
     document.body.appendChild(headerScript);
 
     const pageName = (window.location.pathname.split("/").pop() || "index.html").toLowerCase().replace(/\.html$/, "") || "index";
     const page = (pageName === "upcoming-project" || pageName === "upcoming-study") ? "projects" : pageName;
-    document.querySelectorAll("#main-nav a").forEach(function (link) {
-        const href = (link.getAttribute("href") || "").toLowerCase().split("#")[0].replace(/\.html$/, "") || "index";
-        if (href === page) {
-            link.classList.remove("text-ink/70");
-            link.classList.add("text-ink", "font-medium");
+    document.querySelectorAll("#main-nav a.nav-link").forEach(function (link) {
+        const href = (link.getAttribute("href") || "").toLowerCase().split(/[?#]/)[0].replace(/\.html$/, "") || "index";
+        const current = href === page;
+        link.classList.toggle("is-current", current);
+        if (current) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
         }
     });
 }
@@ -201,5 +204,5 @@ loadSiteChrome().then(function () {
 }).then(function () {
     return loadScript("https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js");
 }).then(function () {
-    return loadScript("js/animate.js");
+    return loadScript("js/animate.js?v=3");
 });

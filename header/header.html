@@ -1,15 +1,15 @@
 <header class="sticky top-0 z-[100] bg-[#fcfaf6]/95 backdrop-blur-md">
-    <div class="mx-auto flex min-h-[88px] w-[min(1180px,calc(100%-32px))] items-center justify-between gap-4 py-2">
+    <div class="header-bar mx-auto flex min-h-[88px] w-[min(1180px,calc(100%-32px))] items-center justify-between gap-4 py-2">
         <a class="flex shrink-0 items-center" href="index.html" aria-label="Ligo Interiors home">
             <img class="logo-horizontal invert" src="images/logo.png" alt="Ligo Interiors">
         </a>
 
-        <nav class="absolute top-full right-0 left-0 hidden flex-col border-b border-ink/10 bg-[#fcfaf6] px-5 py-4 nav:static nav:flex nav:flex-row nav:justify-center nav:gap-8 nav:border-0 nav:bg-transparent nav:p-0" id="main-nav" aria-label="Primary">
-            <a class="py-2.5 text-sm text-ink/70 hover:text-ink nav:py-0" href="index.html">Home</a>
-            <a class="py-2.5 text-sm text-ink/70 hover:text-ink nav:py-0" href="about.html">About</a>
-            <a class="py-2.5 text-sm text-ink/70 hover:text-ink nav:py-0" href="service.html">Services</a>
-            <a class="py-2.5 text-sm text-ink/70 hover:text-ink nav:py-0" href="projects.html">Projects</a>
-            <a class="py-2.5 text-sm whitespace-nowrap text-ink/70 hover:text-ink nav:py-0" href="contact.html">Project Enquiry</a>
+        <nav id="main-nav" aria-label="Primary">
+            <a class="nav-link nav-home" href="index.html">Home</a>
+            <a class="nav-link nav-enquiry" href="contact.html">Project Enquiry</a>
+            <a class="nav-link nav-about" href="about.html">Our Story</a>
+            <a class="nav-link nav-services" href="service.html">Services</a>
+            <a class="nav-link nav-projects" href="projects.html">Portfolio</a>
             <button class="quote-open-btn quote-open-btn-menu" type="button" data-quote-open>Get Free Quote</button>
         </nav>
 
@@ -17,10 +17,9 @@
 
         <button class="group flex h-10 w-10 cursor-pointer items-center justify-center border-0 bg-transparent p-0 nav:hidden" id="nav-toggle" type="button" aria-label="Open menu" aria-controls="main-nav" aria-expanded="false">
             <span class="flex w-[22px] flex-col gap-[6px]">
-                <span class="block h-[1.5px] w-full bg-ink transition duration-200 group-[.is-open]:translate-y-[3.75px] group-[.is-open]:rotate-45"></span>
-                <span class="block h-[1.5px] w-full bg-ink transition duration-200 group-[.is-open]:-translate-y-[3.75px] group-[.is-open]:-rotate-45"></span>
+                <span class="nav-toggle-line block h-[1.5px] w-full bg-ink transition duration-200"></span>
+                <span class="nav-toggle-line block h-[1.5px] w-full bg-ink transition duration-200"></span>
             </span>
         </button>
     </div>
 </header>
-

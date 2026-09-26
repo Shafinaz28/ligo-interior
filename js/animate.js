@@ -11,7 +11,13 @@
 
     const header = document.querySelector("#site-header header");
     if (header) {
-        gsap.from(header, { y: -24, opacity: 0, duration: 0.7, ease: "power2.out" });
+        gsap.from(header, {
+            y: -24,
+            opacity: 0,
+            duration: 0.7,
+            ease: "power2.out",
+            clearProps: "transform"
+        });
     }
 
     const hero = document.querySelector("#home, main > section:first-of-type");
@@ -55,7 +61,8 @@
             opacity: 0,
             duration: 0.7,
             stagger: 0.07,
-            ease: "power2.out"
+            ease: "power2.out",
+            clearProps: "transform"
         });
     });
 
@@ -87,5 +94,18 @@
         tile.addEventListener("mouseleave", hoverOut);
         tile.addEventListener("focusin", hoverIn);
         tile.addEventListener("focusout", hoverOut);
+    });
+
+    document.querySelectorAll(".process-step, .why-card, article:has(.work-icon), [data-img-swap], .upcoming-grid button").forEach(function (card) {
+        card.addEventListener("click", function () {
+            card.classList.remove("is-tapped");
+            void card.offsetWidth;
+            card.classList.add("is-tapped");
+        });
+        card.addEventListener("animationend", function (event) {
+            if (event.animationName === "card-tap") {
+                card.classList.remove("is-tapped");
+            }
+        });
     });
 })();

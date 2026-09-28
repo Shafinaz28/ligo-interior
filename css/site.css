@@ -5,7 +5,7 @@ html, body {
 
 :root {
     --font-heading: "Playfair Display", Georgia, serif;
-    --font-sub: "Cormorant Garamond", Georgia, serif;
+    --font-sub: "Playfair Display", Georgia, serif;
     --font-body: "Cormorant Garamond", Georgia, serif;
     --color-heading: #e0aa3e;
     --color-body: #2D2D2D;
@@ -45,13 +45,14 @@ h2 {
 h3 {
     font-family: var(--font-sub) !important;
     color: var(--color-heading) !important;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    line-height: 1.3;
-    text-align: center;
-    text-transform: none;
-    margin-left: auto;
-    margin-right: auto;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.35;
+    text-align: left;
+    text-transform: none !important;
+    margin-left: 0;
+    margin-right: 0;
     max-width: none;
     white-space: normal;
 }
@@ -62,7 +63,7 @@ h2 {
 }
 
 h3 {
-    font-size: clamp(0.92rem, 1.6vw, 1.08rem);
+    font-size: 28px;
 }
 
 body,
@@ -74,16 +75,16 @@ textarea {
 }
 
 body {
-    font-size: 23px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 400;
     color: var(--color-body);
 }
 
 p,
 li {
     font-family: var(--font-body);
-    font-size: 23px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 400;
     line-height: 1.8;
 }
 
@@ -138,7 +139,7 @@ label,
     font-size: 35px;
     font-style: italic;
     font-weight: 500;
-    letter-spacing: 0;
+    letter-spacing: 0 !important;
     line-height: 1.18;
     text-align: center;
     text-transform: none !important;
@@ -155,18 +156,23 @@ label,
     }
 }
 
-#home .hero-title {
-    margin-top: 0;
+.hero-copy {
+    align-items: center;
+    text-align: center;
+}
+
+.hero-title {
+    text-align: center !important;
 }
 
 .hero-lead {
-    max-width: 42ch;
+    max-width: 38rem;
     margin: 22px auto 0;
     color: #fcfaf6 !important;
     font-family: var(--font-body);
-    font-size: 23px;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0;
     line-height: 1.7;
     text-align: center;
@@ -182,6 +188,8 @@ label,
     align-items: center;
     justify-content: center;
     margin-top: 28px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 12px 22px;
     border: 1px solid #e0aa3e;
     border-radius: 0;
@@ -204,7 +212,7 @@ label,
 
 @media (min-width: 860px) {
     .hero-lead {
-        max-width: 46ch;
+        max-width: 40rem;
     }
 
     .hero-lead br {
@@ -218,6 +226,17 @@ label,
 }
 
 .quiet-luxury h2 {
+    margin: 0 auto 22px;
+    width: 100%;
+    color: var(--color-heading) !important;
+    font-family: var(--font-heading) !important;
+    font-size: 35px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.1em !important;
+    line-height: 1.25;
+    text-align: center !important;
+    text-transform: uppercase !important;
     white-space: normal;
 }
 
@@ -251,7 +270,7 @@ label,
     margin: 0 0 14px;
     color: #111111;
     font-family: var(--font-body);
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.7;
     text-align: left;
@@ -278,7 +297,7 @@ label,
     background: transparent;
     color: #111111;
     font-family: var(--font-body);
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.8;
 }
@@ -292,7 +311,7 @@ label,
     max-width: none;
     color: #111111;
     font-family: var(--font-body);
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.8;
     text-align: left;
@@ -306,7 +325,7 @@ label,
     .core-offering-intro,
     .core-offering-list li,
     .core-offering-note {
-        font-size: 23px;
+        font-size: 20px;
     }
 }
 
@@ -351,7 +370,7 @@ label,
     margin: 0 0 16px;
     color: var(--color-body);
     font-family: var(--font-sub);
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: 0;
     line-height: 1.6;
@@ -364,7 +383,7 @@ label,
     padding: 0 0 0 1.2rem;
     color: var(--color-body);
     font-family: var(--font-body);
-    font-size: 23px;
+    font-size: 20px;
     line-height: 1.9;
     letter-spacing: 0;
     list-style: disc;
@@ -426,19 +445,15 @@ label,
 }
 
 .makes-us-lead {
-    margin: 0 auto 36px;
-    color: #111111;
+    margin: 0 0 36px;
+    color: #2D2D2D;
     font-family: var(--font-sub);
-    font-size: 23px;
+    font-size: 28px;
     font-style: italic;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.45;
     text-align: center;
-    text-transform: none;
-}
-
-.makes-us-list {
     display: grid;
     gap: 28px;
     margin: 0;
@@ -464,11 +479,12 @@ label,
     margin: 0 0 8px;
     color: #e0aa3e !important;
     font-family: var(--font-sub) !important;
-    font-size: 1.12rem;
+    font-size: 22px;
     font-style: italic;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.45;
     letter-spacing: 0.02em;
+    text-align: left !important;
     text-transform: none !important;
 }
 
@@ -482,9 +498,10 @@ label,
     margin: 0;
     color: #111111;
     font-family: var(--font-body);
-    font-size: 23px;
+    font-size: 20px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
+    text-align: left;
     line-height: 1.75;
 }
 
@@ -498,19 +515,20 @@ label,
     }
 
     .makes-us-list h3 {
-        font-size: 1.2rem;
+        font-size: 22px;
     }
 
     .makes-us-list p {
-        font-size: 23px;
+        font-size: 20px;
     }
 }
 
 .process-section h2 {
-    margin-bottom: 36px;
+    margin: 0 0 36px;
     color: #e0aa3e;
     font-size: 35px;
     font-weight: 600;
+    text-align: center;
 }
 
 .process-grid {
@@ -569,33 +587,34 @@ label,
     margin: 0;
     max-width: 28ch;
     color: var(--color-body);
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.6;
     text-align: center;
 }
 
 .process-foot {
-    margin: 28px auto 0;
+    margin: 28px 0 0;
     max-width: 62ch;
     color: #2D2D2D;
-    font-size: 23px;
+    font-family: var(--font-sub);
+    font-size: 20px;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.55;
-    text-align: center;
+    text-align: left;
 }
 
 .projects-lead {
-    margin: 14px auto 0;
+    margin: 14px 0 0;
     max-width: 58ch;
     color: #2D2D2D;
-    font-family: var(--font-body);
-    font-size: 23px;
+    font-family: var(--font-sub);
+    font-size: 20px;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.55;
-    text-align: center;
+    text-align: left;
 }
 
 @media (min-width: 700px) {
@@ -626,7 +645,7 @@ label,
     }
 
     .process-step p {
-        font-size: 23px;
+        font-size: 20px;
     }
 }
 
@@ -651,12 +670,13 @@ label,
 
 .enquiry-kicker {
     margin: 0 0 18px;
-    color: #111111;
-    font-size: 23px;
+    color: #2D2D2D;
+    font-family: var(--font-sub);
+    font-size: 28px;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.5;
-    text-align: center;
+    text-align: left;
 }
 
 .enquiry-quote {
@@ -668,7 +688,7 @@ label,
 .enquiry-quote p {
     margin: 0;
     color: #111111;
-    font-size: 23px;
+    font-size: 20px;
     font-style: italic;
     font-weight: 600;
     line-height: 1.7;
@@ -678,7 +698,7 @@ label,
     display: block;
     margin-top: 8px;
     color: #111111;
-    font-size: 23px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
 }
@@ -699,7 +719,7 @@ label,
     margin: 0 0 14px;
     padding: 0;
     color: #2D2D2D;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.8;
     text-align: left;
@@ -710,7 +730,7 @@ label,
     margin: 0;
     color: #2D2D2D;
     font-family: var(--font-body);
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 600;
     text-align: left;
 }
@@ -719,7 +739,7 @@ label,
 .enquiry-note {
     margin: 0 0 16px;
     color: #111111;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.7;
     text-align: left;
@@ -948,7 +968,7 @@ label,
     margin: 4px 0 0;
     max-width: 46ch;
     color: #111111;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.5;
 }
@@ -1372,14 +1392,6 @@ header .logo-horizontal {
     white-space: normal;
 }
 
-@media (min-width: 860px) {
-    .page-service .cta-band h2 {
-        text-align: left;
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
-
 .img-swap-next {
     position: absolute;
     inset: 0;
@@ -1406,7 +1418,7 @@ header .logo-horizontal {
 .site-footer h2 {
     margin: 0 0 8px;
     color: #e0aa3e;
-    font-size: 14px;
+    font-size: 16px !important;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-align: left;
@@ -1440,8 +1452,8 @@ header .logo-horizontal {
     max-width: 38ch;
     margin: 0;
     color: #fcfaf6;
-    font-size: 0.875rem;
-    line-height: 1.7;
+    font-size: 13px !important;
+    line-height: 1.6;
 }
 
 .footer-quote-btn {
@@ -1468,7 +1480,7 @@ header .logo-horizontal {
     border: 0;
     background: transparent;
     color: #fcfaf6;
-    font-size: 0.875rem;
+    font-size: 13px !important;
     font-family: inherit;
     line-height: 1.5;
     text-align: left;
@@ -2143,6 +2155,24 @@ header .logo-horizontal {
     gap: 8px;
 }
 
+.contact-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    color: #2d2d2d;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.contact-label svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+    color: #e0aa3e;
+}
+
 .contact-aside a {
     margin-top: 2px;
 }
@@ -2353,7 +2383,7 @@ header .logo-horizontal {
     margin: 0 0 18px;
     max-width: 62ch;
     color: #111111;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.7;
     text-align: left;
@@ -2449,8 +2479,21 @@ span.core-offering-intro,
 .upcoming-intro p,
 .quiet-luxury p,
 .projects-lead {
-    font-size: 23px !important;
-    font-weight: 600 !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+}
+
+.makes-us-lead,
+.enquiry-kicker {
+    font-family: var(--font-sub) !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+}
+
+.makes-us-lead,
+.enquiry-kicker {
+    font-size: 28px !important;
 }
 
 h1,
@@ -2460,30 +2503,44 @@ h2,
     font-size: 35px !important;
 }
 
-.site-footer h2 {
-    font-size: 14px !important;
+.quiet-luxury h2 {
+    margin: 0 auto 22px;
+    width: 100%;
+    color: var(--color-heading) !important;
+    font-family: var(--font-heading) !important;
+    font-size: 35px !important;
+    font-style: normal !important;
     font-weight: 600 !important;
-    letter-spacing: 0.12em;
-    line-height: 1.3;
-    text-align: left !important;
-    margin-left: 0;
-    margin-right: 0;
+    letter-spacing: 0.1em !important;
+    line-height: 1.25;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    margin-left: auto;
+    margin-right: auto;
     max-width: none;
+    white-space: normal;
 }
 
 .process-step h3 {
     font-family: var(--font-heading) !important;
+    font-style: normal !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em;
 }
 
 h3,
 .makes-us-lead,
 .makes-us-list h3,
 .enquiry-kicker,
+.projects-lead,
+.process-foot {
+    font-family: var(--font-sub) !important;
+}
+
 .nav-link,
 .why-card p,
-.what-we-do-copy p,
 .process-num {
-    font-family: var(--font-sub) !important;
+    font-family: var(--font-body) !important;
 }
 
 .hero-lead,
@@ -2642,7 +2699,227 @@ h3,
     color: var(--color-heading) !important;
 }
 
+.makes-us-lead,
+.enquiry-kicker,
+.projects-lead,
+.process-foot {
+    color: #2D2D2D !important;
+}
+
+.makes-us-list h3,
+.makes-us-list p,
+.core-offering-intro,
+.core-offering-note,
+.enquiry-quote p,
+.enquiry-quote cite,
+.enquiry-lead,
+.enquiry-note,
+.upcoming-intro p,
+.service-card p,
+.contact-aside,
+main p,
+main li {
+    text-align: left !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h1,
+h2,
+main h1,
+main h2,
+.quiet-luxury h2,
+.core-offering h2,
+.makes-us h2,
+.makes-us-lead,
+.process-section h2,
+.process-foot,
+.enquiry-copy h2,
+.enquiry-kicker,
+.projects-lead,
+.upcoming-intro h1,
+.service-card h2,
+.contact-block h2,
+#faq h2,
+.hero-title {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-lead,
+#home .hero-lead {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.what-we-do-copy h2,
+.what-we-do-copy p,
+.what-we-do-copy ul,
+.what-we-do-copy li {
+    text-align: left !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.process-step h3,
+.process-step p,
+.why-card p,
+.quote-intro,
+.quote-intro h3,
+.quote-card h3 {
+    text-align: center !important;
+}
+
+#home .hero-copy {
+    align-items: center !important;
+    text-align: center !important;
+}
+
+#home .hero-title,
+#home .hero-lead,
+#home .hero-cta {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.site-footer h2 {
+    font-size: 16px !important;
+    text-align: left !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.site-footer p,
+.site-footer a,
+.footer-blurb,
+.site-footer nav a,
+.site-footer .contact-col a,
+.footer-legal p {
+    font-size: 13px !important;
+    line-height: 1.55;
+}
+
 .why-card,
 .why-card p {
     color: #2D2D2D !important;
+}
+
+main .section-lead {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-band {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    padding: 48px 32px;
+    border-radius: 32px;
+    background: #1c1917;
+    color: #fcfaf6;
+    text-align: center;
+    gap: 16px;
+}
+
+.cta-band h2 {
+    max-width: 22em;
+    margin: 0 auto;
+    color: #e0aa3e !important;
+    text-align: center !important;
+    line-height: 1.25;
+}
+
+.cta-band p {
+    max-width: 42ch;
+    margin: 0 auto;
+    color: #fcfaf6 !important;
+    text-align: center !important;
+    line-height: 1.6;
+}
+
+.cta-band-btn {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: #e0aa3e;
+    color: #111111;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.studio-split {
+    padding: 56px 0;
+    background: #fcfaf6;
+}
+
+.studio-split--alt {
+    background: #f3eee4;
+}
+
+.studio-row {
+    display: grid;
+    align-items: center;
+    gap: 28px;
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.studio-row img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 28px;
+}
+
+.studio-copy h2 {
+    margin: 0 0 10px !important;
+    text-align: left !important;
+}
+
+.studio-copy .enquiry-kicker {
+    margin: 0 0 16px;
+    text-align: left !important;
+}
+
+.studio-copy .enquiry-lead {
+    text-align: left !important;
+}
+
+.studio-copy .enquiry-lead:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 860px) {
+    .studio-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+    }
+
+    .studio-row img {
+        height: 460px;
+    }
+
+    .studio-row--flip img {
+        order: 2;
+    }
+
+    .studio-row--flip .studio-copy {
+        order: 1;
+    }
 }

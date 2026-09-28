@@ -26,7 +26,7 @@
     <style>
         html { scroll-behavior: smooth; }
     </style>
-    <link rel="stylesheet" href="css/site.css?v=113">
+    <link rel="stylesheet" href="css/site.css?v=130">
 </head>
 <body class="m-0 flex min-h-screen flex-col bg-paper font-sans text-ink">
     <div id="site-loader" class="site-loader">
@@ -41,7 +41,7 @@
         <section class="relative w-full min-h-[42vh] overflow-hidden bg-ink text-paper">
             <img class="absolute inset-0 h-full w-full object-cover" src="images/projects/PUNIT/DSC01281.avif" alt="A living interior from a Ligo project">
             <div class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(28,25,23,0.28),rgba(28,25,23,0.48))]"></div>
-            <div class="relative mx-auto flex min-h-[42vh] w-[min(1180px,calc(100%-40px))] flex-col items-center justify-center py-12 text-center">
+            <div class="hero-copy relative mx-auto flex min-h-[42vh] w-[min(1180px,calc(100%-40px))] flex-col items-center justify-center py-12 text-center">
                 <p class="text-xs font-bold tracking-[0.2em] text-accent uppercase">Projects Inquiry</p>
                 <h1 class="hero-title"><span>See How We Can</span><span>Work Together.</span></h1>
             </div>
@@ -49,16 +49,6 @@
 
         <section class="enquiry-copy">
             <div class="mx-auto w-[min(860px,calc(100%-32px))]">
-                <h2>Why Clients Choose Us</h2>
-                <blockquote class="enquiry-quote">
-                    <p>“Almost everyone who visits us tells us this doesn’t look like an Indian apartment — it’s like stepping into Europe. Ligo handled everything end-to-end, made the impossible possible, and translated our vision into reality. Truly professional and effortless.”</p>
-                    <cite>— Bangalore client, C-suite executive</cite>
-                </blockquote>
-                <blockquote class="enquiry-quote">
-                    <p>“We used Ligo Interiors for our Prestige Golfshire home. They have excellent taste, and it was a pleasure working with the studio. Would highly recommend them.”</p>
-                    <cite>— Prestige Golfshire homeowner</cite>
-                </blockquote>
-
                 <h2>How We Help</h2>
                 <ul class="enquiry-help">
                     <li><strong>Effortless decisions</strong> – We narrow endless choices down to a few curated options, so every decision feels easy and right.</li>
@@ -81,23 +71,35 @@
         <section class="contact-block py-6 nav:py-8" id="project-enquiry">
             <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
                 <h2 class="text-[1.55rem] leading-tight font-semibold nav:text-[1.75rem]">Tell Us About The House.</h2>
-                <p class="mx-auto mt-1.5 max-w-[46ch] text-center text-sm leading-5 text-ink">Share a few notes. We will follow up with a clear range, a room plan, and a date to walk the scheme.</p>
+                <p class="mt-1.5 max-w-[46ch] text-left text-sm leading-5 text-ink">Share a few notes. We will follow up with a clear range, a room plan, and a date to walk the scheme.</p>
                 <div class="contact-split mt-4 grid items-start gap-4 lg:grid-cols-2 lg:gap-6">
                     <div class="contact-aside">
                         <div>
-                            <p class="text-xs tracking-[0.16em] text-ink uppercase">Email</p>
+                            <p class="contact-label">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m5 8 7 5 7-5" stroke="currentColor" stroke-width="1.8"/></svg>
+                                Email
+                            </p>
                             <a class="mt-1 block text-base hover:text-accent" href="mailto:ligointerior@gmail.com">ligointerior@gmail.com</a>
                         </div>
                         <div>
-                            <p class="text-xs tracking-[0.16em] text-ink uppercase">Phone</p>
+                            <p class="contact-label">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3.8h3.2l1.2 3.1-2 1.2a12 12 0 0 0 6.4 6.4l1.2-2 3.1 1.2V17c0 .8-.7 1.5-1.5 1.5C10.6 18.5 5.5 13.4 5.5 5.3c0-.8.7-1.5 1.5-1.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                                Phone
+                            </p>
                             <a class="mt-1 block text-base hover:text-accent" href="tel:+919108001595">+91 91080 01595</a>
                         </div>
                         <div>
-                            <p class="text-xs tracking-[0.16em] text-ink uppercase">Studio</p>
+                            <p class="contact-label">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-6.2-6-6.2-10.2A6.2 6.2 0 0 1 12 4.6a6.2 6.2 0 0 1 6.2 6.2C18.2 15 12 21 12 21z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10.8" r="2" stroke="currentColor" stroke-width="1.8"/></svg>
+                                Studio
+                            </p>
                             <a class="mt-1 block max-w-[36ch] text-base leading-6 hover:text-accent" href="https://maps.google.com/?q=484,+19th+Main+Rd,+4th+T+Block+East,+Pattabhirama+Nagar,+Jayanagar,+Bengaluru,+Karnataka+560041" target="_blank" rel="noopener noreferrer">484, 19th Main Rd, 4th T Block East, Pattabhirama Nagar, Jayanagar, Bengaluru, Karnataka 560041, India</a>
                         </div>
                         <div>
-                            <p class="text-xs tracking-[0.16em] text-ink uppercase">Social</p>
+                            <p class="contact-label">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="18" cy="5" r="2.4" stroke="currentColor" stroke-width="1.8"/><circle cx="6" cy="12" r="2.4" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="19" r="2.4" stroke="currentColor" stroke-width="1.8"/><path d="M8.2 11.1 15.7 6.9M8.2 12.9l7.5 5.2" stroke="currentColor" stroke-width="1.8"/></svg>
+                                Social
+                            </p>
                             <div class="contact-social" aria-label="Social media">
                                 <a href="https://www.instagram.com/ligointeriors/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>

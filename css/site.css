@@ -1406,9 +1406,9 @@ header .logo-horizontal {
 .site-footer h2 {
     margin: 0 0 8px;
     color: #e0aa3e;
-    font-size: 0.875rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
     text-align: left;
     text-transform: uppercase;
     white-space: normal;
@@ -2458,6 +2458,17 @@ h2,
 .hero-title {
     font-family: var(--font-heading) !important;
     font-size: 35px !important;
+}
+
+.site-footer h2 {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.12em;
+    line-height: 1.3;
+    text-align: left !important;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
 }
 
 .process-step h3 {

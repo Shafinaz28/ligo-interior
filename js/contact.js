@@ -35,25 +35,24 @@ function bindContact() {
         const email = document.getElementById("contact-email").value.trim();
         const address = document.getElementById("contact-address").value.trim();
         const service = document.getElementById("contact-service").value.trim();
-        if (!service) {
-            window.alert("Please select a service.");
-            return;
-        }
         const whatsapp = document.getElementById("contact-whatsapp") && document.getElementById("contact-whatsapp").checked
             ? "Yes"
             : "No";
-        const body = encodeURIComponent(
-            "Name: " + name +
-            "\nPhone: " + phone +
-            "\nEmail: " + email +
-            "\nAddress: " + address +
-            "\nService: " + service +
-            "\nWhatsApp estimate: " + whatsapp
-        );
-        window.location.href =
-            "mailto:ligointerior@gmail.com?subject=" +
-            encodeURIComponent("Interior cost estimate — " + service) +
-            "&body=" + body;
+        const button = form.querySelector(".quote-submit");
+        const send = window.sendLigoLead || function () { return Promise.resolve(false); };
+        send({
+            name: name,
+            phone: phone,
+            email: email,
+            address: address,
+            service: service,
+            whatsapp: whatsapp,
+            page: window.location.pathname
+        }, button).then(function (ok) {
+            if (ok) {
+                form.reset();
+            }
+        });
     });
 }
 

@@ -107,25 +107,25 @@ document.addEventListener("submit", function (event) {
     const email = document.getElementById("quote-email").value.trim();
     const address = document.getElementById("quote-address").value.trim();
     const service = (document.getElementById("quote-service") || {}).value || "";
-    if (!service) {
-        window.alert("Please select a service.");
-        return;
-    }
     const whatsapp = document.getElementById("quote-whatsapp") && document.getElementById("quote-whatsapp").checked
         ? "Yes"
         : "No";
-    const body = encodeURIComponent(
-        "Name: " + name +
-        "\nPhone: " + phone +
-        "\nEmail: " + email +
-        "\nAddress: " + address +
-        "\nService: " + service +
-        "\nWhatsApp estimate: " + whatsapp
-    );
-    window.location.href =
-        "mailto:ligointerior@gmail.com?subject=" +
-        encodeURIComponent("Interior cost estimate — " + service) +
-        "&body=" + body;
+    const button = event.target.querySelector(".quote-submit");
+    const send = window.sendLigoLead || function () { return Promise.resolve(false); };
+    send({
+        name: name,
+        phone: phone,
+        email: email,
+        address: address,
+        service: service,
+        whatsapp: whatsapp,
+        page: window.location.pathname
+    }, button).then(function (ok) {
+        if (ok) {
+            event.target.reset();
+            closeQuoteModal();
+        }
+    });
 });
 
 async function loadPartial(id, url) {
@@ -167,7 +167,7 @@ async function loadQuoteModal() {
 async function loadSiteChrome() {
     await Promise.allSettled([
         loadPartial("site-header", "header/header.html?v=21"),
-        loadPartial("site-footer", "footer/footer.html?v=8"),
+        loadPartial("site-footer", "footer/footer.html?v=11"),
         loadQuoteModal()
     ]);
 
@@ -200,6 +200,10 @@ function loadScript(src) {
 }
 
 loadSiteChrome().then(function () {
+    return loadScript("https://cdn.jsdelivr.net/npm/sweetalert2@11");
+}).then(function () {
+    return loadScript("js/sheet-form.js?v=1");
+}).then(function () {
     return loadScript("https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js");
 }).then(function () {
     return loadScript("https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js");

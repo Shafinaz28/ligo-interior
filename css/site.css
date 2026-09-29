@@ -2953,3 +2953,18 @@ main .section-lead {
         letter-spacing: 0.03em !important;
     }
 }
+
+.service-card h2,
+.service-card p {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.how-we-work h2,
+.how-we-work h3,
+.how-we-work p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

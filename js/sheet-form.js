@@ -1,4 +1,4 @@
-window.LIGO_SHEET_URL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
+window.LIGO_SHEET_URL = "https://script.google.com/macros/s/AKfycbz4N76MUS7OiF4cJCCNAaw7oCUlK4NynXQQIQF-990NwmIRef1oQAe5t2iCnVXO46g/exec";
 
 function ligoSwal(options) {
     if (window.Swal && typeof window.Swal.fire === "function") {
@@ -33,38 +33,24 @@ window.sendLigoLead = function (data, button) {
         });
     }
 
-    const label = button ? button.innerHTML : "";
-    if (button) {
-        button.disabled = true;
-        button.textContent = "Sending…";
-    }
-
-    return fetch(window.LIGO_SHEET_URL, {
+    const payload = JSON.stringify(data);
+    fetch(window.LIGO_SHEET_URL, {
         method: "POST",
         mode: "no-cors",
+        keepalive: true,
         headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify(data)
+        body: payload
+    });
+
+    if (button) {
+        button.disabled = false;
+    }
+
+    return ligoSwal({
+        icon: "success",
+        title: "Quote sent",
+        text: "Thank you. We will follow up with a range and a date to walk the scheme."
     }).then(function () {
-        return ligoSwal({
-            icon: "success",
-            title: "Quote sent",
-            text: "Thank you. We will follow up with a range and a date to walk the scheme."
-        }).then(function () {
-            return true;
-        });
-    }).catch(function () {
-        return ligoSwal({
-            icon: "error",
-            title: "Could not send",
-            text: "Please try again or WhatsApp us."
-        }).then(function () {
-            return false;
-        });
-    }).then(function (ok) {
-        if (button) {
-            button.disabled = false;
-            button.innerHTML = label;
-        }
-        return ok;
+        return true;
     });
 };

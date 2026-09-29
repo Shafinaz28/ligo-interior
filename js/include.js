@@ -202,7 +202,7 @@ function loadScript(src) {
 loadSiteChrome().then(function () {
     return loadScript("https://cdn.jsdelivr.net/npm/sweetalert2@11");
 }).then(function () {
-    return loadScript("js/sheet-form.js?v=1");
+    return loadScript("js/sheet-form.js?v=3");
 }).then(function () {
     return loadScript("https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js");
 }).then(function () {
